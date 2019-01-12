@@ -11,6 +11,7 @@ class House extends Model
 
     protected $table = 'houses';
     protected $dates = ['deleted_at', 'created_at', 'updated_at'];
+    protected $guarded = ['id'];
 
     public function images(){
 

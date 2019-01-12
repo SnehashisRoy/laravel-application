@@ -11,6 +11,8 @@ class AuthController extends Controller
 {
     public function signUp(Request $r, User $user){
 
+        \Log::info($r);
+
     	// for sign up, as we are not using auth:api middleware, we will have to manually ensure it's an ajax call with request with XMLHttpRequest 
     	// otherwise, error response will not be json .
     	$r->headers->set('X-Requested-With', 'XMLHttpRequest');
@@ -18,13 +20,13 @@ class AuthController extends Controller
 
     	$this->validate($r, [
     		'name' => 'required',
-    		'email' => 'required|unique:users', // check unique name in user database;
-    		'password' => 'required',
+    		'email' => 'required|unique:users|email', // check unique name in user database;
+    		'password1' => 'required',
     	]);
 
     	$user->name = $r->name;
     	$user->email = $r->email;
-    	$user->password = Hash::make($r->password);
+    	$user->password = Hash::make($r->password1);
 
     	$user->save();
 

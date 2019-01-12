@@ -34,6 +34,7 @@ class CreatHouseTable extends Migration
             $table->string('image_url')->nullable();
             $table->string('longitude')->nullable();
             $table->string('lattitude')->nullable();
+            $table->string('status', 10)->nullable();
             $table->boolean('approved')->nullable();
             $table->timestamps();
             $table->softDeletes();

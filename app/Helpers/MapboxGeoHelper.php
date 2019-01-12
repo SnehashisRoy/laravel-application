@@ -30,7 +30,7 @@ class MapboxGeoHelper implements GeocodingInterface
 		$address = implode('+',explode(' ', $address));
 
 		$client = new Client([
-		       'timeout'  => 5,
+		       'timeout'  => 1,
 		]);
 
 
@@ -41,11 +41,22 @@ class MapboxGeoHelper implements GeocodingInterface
 
 			$array = json_decode($json);
 
+			if(!$array->features){
+			throw new \Exception("Invalid address! Please check the address and try it again");
+			
+			}
+
 		} catch (ClientException $e) {
+
+			\Log::info($e->getMessage());
+
+			throw new \Exception('your request could not be processed. Try again later');
+			//return response()->json($e->getMessage());
 		    //echo Psr7\str($e->getRequest());
 		    //echo Psr7\str($e->getResponse());
 		}
 
+		
 		if($array->features[0]->context){
 
 			foreach($array->features[0]->context as $context){
