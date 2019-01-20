@@ -11,7 +11,7 @@ use App\Models\Image;
 class ListingsController extends Controller
 {
     public function getListings(){
-        $listings = House::with('images')->get();
+        $listings = House::with('images')->where('user_id', \Auth::id())->get();
 
         return  response()->json(['success' => true, 'data' => $listings]);
     }
@@ -28,6 +28,7 @@ class ListingsController extends Controller
 
 
         $house->title = $r->title;
+        $house->user_id = \Auth::id();
         $house->slug = implode('-', explode(' ', $r->title));
         $house->address = $r->address;
         $house->city = $r->city;
@@ -48,7 +49,9 @@ class ListingsController extends Controller
 
     }
 
-    public function updateListingById(Request $r, $id){
+    public function updateListingById($id, Request $r){
+
+        \Log::info($id);
 
 
     	$house = House::findOrFail($id);

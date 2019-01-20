@@ -34,6 +34,19 @@ class ScraperController extends Controller
     	return view('admin.scraper.main-url');
     }
 
+
+
+    public function insertListings(Request $r){
+
+        dd($r);
+
+    }
+
+
+
+
+
+
     public function postScraperUrl(Request $r){
 
     	//dd($r->url);

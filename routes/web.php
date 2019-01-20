@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -19,6 +20,15 @@ use GuzzleHttp\Client as GuzzleClient;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/kijiji/main-url','Admin\ScraperController@getScraperUrl');
+
+// Route::post('/kijiji/main-url', 'Admin\ScraperController@insertListings');
+
+
+
+
+
 
 Route::get('/scraper/main-url', 'Admin\ScraperController@getScraperUrl');
 Route::get('/scraper/detail', 'Admin\ScraperController@getHouseDetail');
@@ -147,6 +157,37 @@ Route::get('/geocode', function(){
     // $coordinate = $array->results[0]->geometry->location;
 
     // return $array->results;
+
+
+});
+
+Route::get('kijiji', function(){
+
+    $res = file_get_contents('https://www.kijiji.ca/rss-srp-real-estate/city-of-toronto/basement-for-rent/k0c34l1700273');
+
+    $arr = Parser::xml($res);
+
+    dd($arr);
+
+    // $xml = new SimpleXMLElement($res);
+
+    // foreach($xml->channel->item as $item){
+
+    // };
+
+    // foreach($xml->channel as $value){
+
+    //     dd($value);
+        
+    // };
+
+    // $client = new GuzzleHttp\Client(['base_uri' => 'https://www.kijiji.ca/']);        
+    
+    // $res = $client->request('GET', 'rss-srp-real-estate/city-of-toronto/basement-for-rent/k0c34l1700273');
+
+    // dd($res->getBody());
+
+
 
 
 });
