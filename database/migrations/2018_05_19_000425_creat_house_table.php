@@ -18,6 +18,8 @@ class CreatHouseTable extends Migration
             $table->integer('user_id')->nullable();
             $table->text('title')->nullable();
             $table->text('slug')->nullable();
+            $table->text('kijiji_link')->nullable();
+            $table->string('kijiji_publish_date')->nullable();
             $table->text('address')->nullable();
             $table->text('description')->nullable();
             $table->string('city')->nullable();

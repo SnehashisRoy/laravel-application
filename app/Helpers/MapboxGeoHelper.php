@@ -25,7 +25,7 @@ class MapboxGeoHelper implements GeocodingInterface
 
 	
 
-	public function getInfoFromAddress($address){
+	public function getInfoFromAddress($address, $api = true ){
 
 		$address = implode('+',explode(' ', $address));
 
@@ -41,25 +41,34 @@ class MapboxGeoHelper implements GeocodingInterface
 
 			$array = json_decode($json);
 
-			if(!$array->features){
-			throw new \Exception("Invalid address! Please check the address and try it again");
-			
+			if($api){
+
+				if(!$array->features){
+				throw new \Exception("Invalid address! Please check the address and try it again");
+				
+				}
+
 			}
+            
+			
 
 		} catch (ClientException $e) {
 
-			\Log::info($e->getMessage());
+			if($api){
+				throw new \Exception('your request could not be processed. Try again later');
 
-			throw new \Exception('your request could not be processed. Try again later');
+			}
+
+
 			//return response()->json($e->getMessage());
 		    //echo Psr7\str($e->getRequest());
 		    //echo Psr7\str($e->getResponse());
 		}
 
 		
-		if($array->features[0]->context){
+		if(@$array->features[0]->context){
 
-			foreach($array->features[0]->context as $context){
+			foreach(@$array->features[0]->context as $context){
 					if(explode('.',$context->id)[0] == 'postcode'){
 						$this->postal = $context->text;
 					}elseif (explode('.',$context->id)[0] == 'place') {
@@ -73,8 +82,8 @@ class MapboxGeoHelper implements GeocodingInterface
 		}
 				 
 		
-        $this->lat       = $array->features[0]->geometry->coordinates[1];
-        $this->lng       = $array->features[0]->geometry->coordinates[0];
+        $this->lat       = @$array->features[0]->geometry->coordinates[1];
+        $this->lng       = @$array->features[0]->geometry->coordinates[0];
         
 
 

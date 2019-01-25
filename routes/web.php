@@ -26,10 +26,6 @@ Route::get('/', function () {
 // Route::post('/kijiji/main-url', 'Admin\ScraperController@insertListings');
 
 
-
-
-
-
 Route::get('/scraper/main-url', 'Admin\ScraperController@getScraperUrl');
 Route::get('/scraper/detail', 'Admin\ScraperController@getHouseDetail');
 Route::post('/scraper/main-url', 'Admin\ScraperController@postScraperUrl');
