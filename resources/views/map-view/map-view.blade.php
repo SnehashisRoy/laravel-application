@@ -19,7 +19,7 @@
 @section('content')
 
 <div id="map_view">
-    <div class='row'>
+    <div class="row" style="display: none;">
     	<div class="col-md-3">
     		<div class="form-group">
     		    <label for="minPrice">Min Price : $ ${filters.minPrice}</label>
@@ -60,29 +60,28 @@
     	  <button type="button" class="btn btn-primary btn-lg btn-block" @click=filter() >Filter</button>
     	</div>
     </div>
-    <div id="mapid" style="height:600px; margin-top: 20px;"></div>
+    <div id="mapid" style="height:1000px; margin-top: 20px; z-index: 0;"></div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal" style="display: block;" v-if="openModal">
+
+   <!-- Modal content -->
+   <div class="modal-content">
+     <span class="close" @click=closeModal()>&times;</span>
+     <div class="container">
+         <div class="row">
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <img :src="listing.image_url" class="img-responsive" :alt="listing.title">
+            </div>
+             ${listing.address}
+         </div>
+     </div>
+     
+   </div>
+
  </div>
     
    

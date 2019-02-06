@@ -21,7 +21,21 @@ class MapViewController extends Controller
     			'properties' =>  [
     				'type' => $house->type,
     				'address' =>  $house->address,
-    				'popupContent' =>    'this is description' //$house->description
+    				'popupContent' => $house->address,
+                    'title' => $house->title,
+                    'description' => $house->description,
+                    'kijiji_link' => $house->kijiji_link,
+                    'kijiji_publish_date' => $house->kijiji_publish_date,
+                    'bedrooms' => $house->bedrooms,
+                    'bathrooms' => $house->bathrooms,
+                    'furnished' => $house->furnished,
+                    'pet_friendly' => $house->pet_friendly,
+                    'parking' => $house->parking,
+                    'size' => $house->size,
+                    'price' => $house->price,
+                    'image_url' => $house->image_url,
+
+
 
     			], 
     			'geometry'   => [
@@ -39,8 +53,6 @@ class MapViewController extends Controller
     	}
 
     	
-
-
 
     	return view('map-view.map-view', [
 
