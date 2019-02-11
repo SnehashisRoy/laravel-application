@@ -23,7 +23,7 @@ var map_view = new Vue({
 
 		    	drawMap(){
 
-		    		var mymap = L.map('mapid').setView([43.83097, -79.16437], 10);
+		    		var mymap = L.map('mapid').setView([43.69494, -79.293783], 12);
 
 		    		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 		    		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',

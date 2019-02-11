@@ -56,35 +56,52 @@ class listingsFromKijiji extends Command
      */
     public function handle( GeocodingInterface $geo)
     {
-        $valid_urls = [];
+        // $valid_urls = [];
+
+        // $url = $this->argument('url');
+        
+        // $valid_urls[] = $url; 
+
+        
+        // for($i=2; $i<3; $i++){
+
+        //     $next_url = str_replace('basement-for-rent/', 'basement-for-rent/page-'.$i.'/', $url);
+        //     $valid_urls[] = $next_url;
+        
+        // }
+
+        // dd($valid_urls);
+
+        // foreach ($valid_urls as $url) {
+            
+        //      $res = file_get_contents($url);
+
+        //     $arr = Parser::xml($res);
+
+        //     foreach($arr['channel']['item'] as $item){
+
+        //         $details = $this->getDetailFromScraping($item);
+
+        //         $this->insertListing($details, $geo);
+
+        //         unset($details);
+
+        //     };
+
+
+        // }
 
         $url = $this->argument('url');
-        
-        $valid_urls[] = $url; 
 
-        
-        for($i=1; $i<11; $i++){
+        $res = file_get_contents($url);
 
-            $next_url = str_replace('basement-for-rent/', 'basement-for-rent/page-'.$i.'/', $url);
-            $valid_urls[] = $next_url;
-        
-        }
+        $arr = Parser::xml($res);
 
-        foreach ($valid_urls as $url) {
-            
-            $res = file_get_contents($url);
+        foreach($arr['channel']['item'] as $item){
 
-            $arr = Parser::xml($res);
+            $details = $this->getDetailFromScraping($item);
 
-            foreach($arr['channel']['item'] as $item){
-
-                $details = $this->getDetailFromScraping($item);
-
-                $this->insertListing($details, $geo);
-
-            };
-
-
+            $this->insertListing($details, $geo);
         }
         
 
@@ -160,6 +177,7 @@ class listingsFromKijiji extends Command
         $links = House::all()->pluck('kijiji_link')->all();
 
         if(in_array(@$details['link'], $links)){
+            $this->info('already in database');
                 return;
         }
 
@@ -170,16 +188,17 @@ class listingsFromKijiji extends Command
         $house = new House;
         $house->title = @$details['title'];
         $house->slug =  @$details['slug'];
+        $house->kijiji_link =  @$details['link'];
         $house->address = @$details['address'];
         $house->description = @$details['description'];
         $house->type = 'basement';
-        $house->bedrooms = @$details['Bedrooms (#)'];
-        $house->bathrooms = @$details['Bathrooms (#)'];
+        $house->bedrooms = @explode(' ', @$details['Bedrooms (#)'])[0];
+        $house->bathrooms = @explode(' ', @$details['Bathrooms (#)'])[0];
         $house->furnished = @$details['Furnished'];
         $house->pet_friendly = @$details['Pet Friendly'];
         $house->parking = null ;
-        $house->size = @$details['price'];
-        $house->price = @$details['Size (sqft)'];
+        $house->price = @$details['price'];
+        $house->size = @$details['Size (sqft)'];
         $house->image_url = @$details['main_image']; 
         $house->approved = 1;
 
@@ -201,5 +220,7 @@ class listingsFromKijiji extends Command
 
 
         }
+
+        $this->info('one listing inserted');
     }
 }

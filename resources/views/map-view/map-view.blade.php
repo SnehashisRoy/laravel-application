@@ -19,6 +19,7 @@
 @section('content')
 
 <div id="map_view">
+    
     <div class="row" style="display: none;">
     	<div class="col-md-3">
     		<div class="form-group">
@@ -55,12 +56,12 @@
     	</div>
 
     </div>
-    <div class="row">
+    <div class="row" style="display: none;">
     	<div class="col">
     	  <button type="button" class="btn btn-primary btn-lg btn-block" @click=filter() >Filter</button>
     	</div>
     </div>
-    <div id="mapid" style="height:1000px; margin-top: 20px; z-index: 0;"></div>
+    <div id="mapid" style="height:1000px; z-index: 0;"></div>
 
 
     
@@ -73,10 +74,26 @@
      <span class="close" @click=closeModal()>&times;</span>
      <div class="container">
          <div class="row">
-            <div class="col-sm-12 col-md-6 col-md-offset-3">
-                <img :src="listing.image_url" class="img-responsive" :alt="listing.title">
+            <div class="col-sm-12 col-md-6">
+                <img :src="listing.image_url" class="img-responsive" :alt="listing.title" style="width:100%;">
             </div>
-             ${listing.address}
+
+            <div class="col-sm-12 col-md-6">
+                <h3 class="green">${listing.title}</h3>
+                <p><span class="bold">Description:</span> ${listing.description}</p>
+                <p> <span class="bold">Price: </span>${listing.price ? listing.price : 'NA' }</p>
+                <p> <span class="bold">Size: </span>${listing.size ? listing.size : 'NA' }</p>
+                <p> <span class="bold">Bedrooms: </span>${listing.bedrooms ? listing.bedrooms : 'NA' }</p>
+                <p> <span class="bold">Bathrooms: </span>${listing.bathrooms ? listing.bathrooms : 'NA' }</p>
+                <p> <span class="bold">Furnished: </span>${listing.furnished ? listing.furnished : 'NA' }</p>
+                <p> <span class="bold">Pet Friendly: </span>${listing.pet_friendly ? listing.pet_friendly : 'NA' }</p>
+                <p> <span class="bold">Parking: </span>${listing.parking ? listing.parking : 'NA' }</p>
+                <p> <span class="bold">Published On: </span>${listing.kijiji_publish_date ? listing.kijiji_publish_date : 'NA' }</p>
+                <a :href="listing.kijiji_link"><div class="btn btn-success" style="width:100%;"> Connect the Renter</div></a>
+                
+
+            </div>
+             
          </div>
      </div>
      
