@@ -19,49 +19,50 @@
 @section('content')
 
 <div id="map_view">
+    <div class="container">
+
+            <div class="form-row form-inline">
+                    <div class="form-group col-md-3">
+                        <label for="minPrice">Min Price : $ ${filters.minPrice}</label>
+                        <input type="range" class="custom-range" id="minPrice" min="0" max="2000" v-model="filters.minPrice">
+                      </div>
+                
+
+                    <div class="form-group col-md-3">
+                        <label for="maxPrice"> Max Price : $ ${filters.maxPrice}</label>
+                        <input type="range" class="custom-range" id="maxPrice" min="0" max="2000" v-model="filters.maxPrice" >
+                      </div>           
+
+                <div class=" form-group col-md-2">
+                    <label for="bedroom">Bedroom</label>
+                    <select id= "bedroom" class="form-control" v-model="filters.bed">
+                      <option value="">Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                      <option value="4">Four</option>
+                    </select>       
+
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="bathroom">Bathroom</label>
+                    <select id= "bathroom" class="form-control" v-model="filters.bath" >
+                      <option value="">Select</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>       
+
+                </div>
+                  <button type="button" class="btn btn-success" @click=filter() > Apply Filter</button>
+
+            </div>
+        
+    </div>
     
-    <div class="row" style="display: none;">
-    	<div class="col-md-3">
-    		<div class="form-group">
-    		    <label for="minPrice">Min Price : $ ${filters.minPrice}</label>
-    		    <input type="range" class="form-control-range" id="minPrice" min="0" max="2000" v-model="filters.minPrice" @change= filter() >
-    		  </div>
-   		
-    	</div>
-
-    	<div class="col-md-3">
-    		<div class="form-group">
-    		    <label for="maxPrice"> Max Price : $ ${filters.maxPrice}</label>
-    		    <input type="range" class="form-control-range" id="maxPrice" min="0" max="2000" v-model="filters.maxPrice" @change= filter() >
-    		  </div>    	   
-    	</div>
-
-    	<div class="col-md-3">
-    		<label for="bedroom">Bedroom</label>
-			<select id= "bedroom" class="custom-select" v-model="filters.bed" @change= filter() >
-			  <option value="1">One</option>
-			  <option value="2">Two</option>
-			  <option value="3">Three</option>
-			</select> 		
-
-    	</div>
-    	<div class="col-md-3">
-    		<label for="bathroom">Bedroom</label>
-			<select id= "bathroom" class="custom-select" v-model="filters.bath" @change= filter() >
-			  <option value="1">One</option>
-			  <option value="2">Two</option>
-			  <option value="3">Three</option>
-			</select> 		
-
-    	</div>
-
-    </div>
-    <div class="row" style="display: none;">
-    	<div class="col">
-    	  <button type="button" class="btn btn-primary btn-lg btn-block" @click=filter() >Filter</button>
-    	</div>
-    </div>
-    <div id="mapid" style="height:1000px; z-index: 0;"></div>
+    
+    
+    <div id="mapid" style="height:600px; z-index: 0;"></div>
 
 
     
@@ -80,6 +81,8 @@
 
             <div class="col-sm-12 col-md-6">
                 <h3 class="green">${listing.title}</h3>
+
+                <p><span class="bold">Address:</span> ${listing.address}</p>
                 <p><span class="bold">Description:</span> ${listing.description}</p>
                 <p> <span class="bold">Price: </span>${listing.price ? listing.price : 'NA' }</p>
                 <p> <span class="bold">Size: </span>${listing.size ? listing.size : 'NA' }</p>
@@ -100,6 +103,7 @@
    </div>
 
  </div>
+</div>
     
    
 @endsection

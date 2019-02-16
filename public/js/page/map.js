@@ -46,6 +46,17 @@ var map_view = new Vue({
 		    		         layer
 		    		         .on('click', function(){ 
 
+		    		         	// to display after modal after filtering
+		    		         	if(this instanceof Vue){
+		    		         		
+		    		         		this.openModal = true;
+		    		         	
+		    		         		this.listing = feature.properties;
+
+		    		         		return;
+
+		    		         	};
+
 		    		         	this.map_view.openModal = true;
 		    		         	
 		    		         	this.map_view.listing = feature.properties;

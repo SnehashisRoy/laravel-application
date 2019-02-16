@@ -68,23 +68,23 @@ class MapViewController extends Controller
 
         if($r->has('filters.minPrice')){
 
-            $houses = $houses->where('price' ,'>' , $r->input('filters.minPrice'));
+            $houses = $houses->where('price' ,'>' , (int)$r->input('filters.minPrice'));
         }
 
         
         if($r->has('filters.maxPrice')){
 
-            $houses = $houses->where('price' ,'>' , $r->input('filters.maxPrice'));
+            $houses = $houses->where('price' ,'<' , (int)$r->input('filters.maxPrice'));
         }
 
         if($r->has('filters.bed')){
 
-            $houses = $houses->where('bedrooms' ,'=' , $r->input('filters.bed'));
+            $houses = $houses->where('bedrooms' ,'like' , $r->input('filters.bed'));
         }
 
         if($r->has('filters.bath')){
 
-            $houses = $houses->where('bathrooms' ,'=' , $r->input('filters.bath'));
+            $houses = $houses->where('bathrooms' ,'like' , $r->input('filters.bath'));
         }
 
 
@@ -98,7 +98,20 @@ class MapViewController extends Controller
                 'properties' =>  [
                     'type' => $house->type,
                     'address' =>  $house->address,
-                    'popupContent' =>    'this is description' //$house->description
+                    'popupContent' => $house->address,
+                    'title' => $house->title,
+                    'description' => $house->description,
+                    'kijiji_link' => $house->kijiji_link,
+                    'kijiji_publish_date' => $house->kijiji_publish_date,
+                    'bedrooms' => $house->bedrooms,
+                    'bathrooms' => $house->bathrooms,
+                    'furnished' => $house->furnished,
+                    'pet_friendly' => $house->pet_friendly,
+                    'parking' => $house->parking,
+                    'size' => $house->size,
+                    'price' => $house->price,
+                    'image_url' => $house->image_url,
+                    
 
                 ], 
                 'geometry'   => [

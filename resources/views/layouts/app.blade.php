@@ -11,6 +11,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 	 <link href="{{ url('/css/app.css') }}" rel="stylesheet">
 	 <link href="{{ url('/css/custom.css') }}" rel="stylesheet">
 	 <script src="{{ url('/js/app.js') }}"></script>
@@ -25,40 +27,22 @@
 	
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: green;">
-	  <a class="navbar-brand mb-0 h1" href="#">Sharehouse</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
+	<div class="bgprimary text-center white" style=" padding: 20px 0; letter-spacing: 3px;font-weight: bold;font-size: 150%;">BanglaToronto
+	</div>
 
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position: absolute; right: 10px; ">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      
-	    </ul>
-	    
-	  </div>
-	</nav>
+	<div class="topnav">
+		<div class="toggle-bar"><i class="fas fa-bars"></i></div>
+
+		<ul>
+			<li>Blogs</li>
+			<li>Blogs</li>
+			<li>Blogs</li>
+			<li>Blogs</li>
+			<li>Blogs</li>
+		</ul>
+
+	</div>
+	
 	
  
     @yield('content')
@@ -66,6 +50,20 @@
 	
 	
 @yield('pagejs')
+<script type="text/javascript">
+	var bar = document.querySelector(".toggle-bar");
+	var nav = document.querySelector(".topnav ul");
+
+	bar.addEventListener('click', function(){
+		console.log(nav.style.display);
+		if(nav.style.display == ''){
+			nav.style.display = 'block';
+
+		}else{
+			nav.style.display = '';
+		};
+	});
+</script>
 </body>
 </html>
 

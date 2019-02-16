@@ -31,7 +31,7 @@
 
 /* The Close Button */
 .close {
-  color: green;
+  color: #000000;
   float: right;
   font-size: 36px;
   font-weight: bold;
@@ -39,7 +39,7 @@
 
 .close:hover,
 .close:focus {
-  color: green;
+  color: #000000;
   opacity: 50%;
   text-decoration: none;
   cursor: pointer;
@@ -48,12 +48,12 @@
 
 /* colors */
 
-.green {
-    color: green;
+.primary {
+    color: #000000;
 
 }
-.bg-green {
-    background-color: green;
+.bgprimary {
+    background-color: #000000;
 }
 
 .white {
@@ -61,6 +61,63 @@
 }
 
 /* top navigation bar */
+
+.topnav {
+  border-bottom: 1px solid grey;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+      .topnav {
+      text-align: center; 
+      padding: 15px 0;
+    }
+
+    .topnav ul {
+      list-style-type: none;
+    }
+
+    .topnav li {
+       display: inline-block;
+       margin-right: 60px;
+       font-size: 18px;
+       color: #000000;
+       font-weight: bold;
+    }
+
+    .toggle-bar{
+      display: none;
+    }
+  
+}
+
+@media only screen and (max-width: 600px) {
+
+    .topnav ul {
+      display : none;
+      list-style-type: none;
+      border: 1px solid black;
+      width: 30%;
+    }
+
+    .topnav li {
+      font-size: 18px;
+       color: #000000;
+       font-weight: bold;
+      
+    }
+
+    .toggle-bar{
+      display: block;
+      padding: 10px 0 0 15px;
+      font-size: 20px;
+    }
+
+
+
+  }
 
 
 
