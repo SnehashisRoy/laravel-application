@@ -2,6 +2,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Monteserrat', sans-serif;
+}
+
 .bold{
   font-weight: bold;
 }
@@ -49,11 +53,19 @@
 /* colors */
 
 .primary {
-    color: #000000;
+    color: #001f3f;
 
 }
+.secondary {
+  color: #00ffff;
+}
+
 .bgprimary {
-    background-color: #000000;
+    background-color: #001f3f;
+}
+
+.bgsecondary {
+  background-color: #00ffff;
 }
 
 .white {
@@ -62,17 +74,30 @@
 
 /* top navigation bar */
 
-.topnav {
+/*.topnav {
   border-bottom: 1px solid grey;
 }
 
+*/
 
+.topnav ul a {
+
+  text-decoration: none;
+  color: #001f3f;
+
+}
+.topnav ul  a:hover{
+
+  text-decoration: underline;
+  color: #001f3f;
+
+}
 
 @media only screen and (min-width: 600px) {
 
       .topnav {
       text-align: center; 
-      padding: 15px 0;
+      padding: 10px 0;
     }
 
     .topnav ul {
@@ -82,8 +107,7 @@
     .topnav li {
        display: inline-block;
        margin-right: 60px;
-       font-size: 18px;
-       color: #000000;
+       font-size: 16px;
        font-weight: bold;
     }
 
@@ -98,13 +122,12 @@
     .topnav ul {
       display : none;
       list-style-type: none;
-      border: 1px solid black;
-      width: 30%;
+      width: 40%;
     }
 
     .topnav li {
-      font-size: 18px;
-       color: #000000;
+      font-size: 16px;
+       color: #001f3f;
        font-weight: bold;
       
     }
@@ -118,6 +141,118 @@
 
 
   }
+
+// pagination styling
+
+.page-item .page-link {
+
+    color: #001f3f; 
+    background-color: #001f3f;
+    border: 1px solid #001f3f;
+
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #001f3f;
+    border-color: #001f3f;
+}
+
+.page-item .page-link {
+    color: #001f3f;
+    background-color: #fff;
+    border-color: #001f3f;
+}
+
+/* hero image and text */
+
+.hero-image-1 {
+      background-image: url('/images/businesses.jpg'); 
+      height: 600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+}
+
+.hero-image-2 {
+      background-image: url('/images/house.jpg'); 
+      height: 600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+}
+
+.hero-div-1 {
+        padding: 0 50px 50px 100px;
+      }
+
+.hero-div-2 {
+       padding: 0 100px 50px 50px;
+     }
+
+.hero-text {
+     text-align: center;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     padding: 20px;
+     text-shadow: 1px 5px 5px black;
+}
+
+
+@media only screen and (max-width: 600px){
+      
+      .hero-image-1 {
+        height: 400px;
+      }
+
+      .hero-div-1 {
+        padding: 10px;
+      }
+
+      .hero-div-2 {
+        padding: 10px;
+      }
+
+      .hero-image-2 {
+        height: 400px;
+      }
+
+
+}
+
+/* business */
+
+.business-list {
+  list-style: none;
+}
+
+.business-list a:hover {
+  text-decoration: none;
+  color:#00ffff;
+}
+
+/* footer */
+.social i {
+  margin-right: 30px;
+}
+
+/* business category page */
+
+.business-box-shadow {
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 1px 1px 10px 2px;
+}
+
+.business-box-border {
+  border-top: 20px solid #001f3f;
+}
 
 
 

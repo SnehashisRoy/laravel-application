@@ -16,14 +16,25 @@ use Goutte\Client;
 use GuzzleHttp\Client as GuzzleClient;
 
 
+// Banglatoronto
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Bangla\HomeController@home');
+Route::get('/businesses/{category}', 'Bangla\CompanyController@businessesByCategory');
+Route::get('/blogs', 'Bangla\BlogsController@blogs');
 
-// Route::get('/kijiji/main-url','Admin\ScraperController@getScraperUrl');
+// Banglatoronto Admin
 
-// Route::post('/kijiji/main-url', 'Admin\ScraperController@insertListings');
+Route::get('/admin/dashboard', 'Admin\DashboardController@dashboard');
+Route::get('/admin/dashboard/businesses', 'Admin\BusinessesController@index');
+Route::get('/admin/dashboard/businesses/create', 'Admin\BusinessesController@create');
+Route::post('/admin/dashboard/businesses/create', 'Admin\BusinessesController@postCreate');
+Route::get('/admin/dashboard/businesses/edit/{id}', 'Admin\BusinessesController@edit');
+Route::post('/admin/dashboard/businesses/edit/{id}', 'Admin\BusinessesController@postEdit');
+
+
+
+
+
 
 
 Route::get('/scraper/main-url', 'Admin\ScraperController@getScraperUrl');

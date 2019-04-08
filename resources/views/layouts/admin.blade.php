@@ -35,40 +35,48 @@
 													    letter-spacing: 4px;
 													    padding: 0 0 10px;
 													    font-weight: bold;"> 
-	  Let's build a stronger community
+	  Admin Dashboard
 	</div>
 
 	<div class="topnav">
 		<div class="toggle-bar"><i class="fas fa-bars"></i></div>
 
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Blogs</a></li>
-			<li id='click-contact-1'><a href="#">Contact Us</a></li>
+			<li><a href="/admin/dashboard/businesses">Businesses</a></li>
+			<li><a href="/admin/dashboard/blogs">Blogs</a></li>
+			<li><a href="/admin/dashboard/properties">Properties</a></li>
 		</ul>
 
 	</div>
-	
-	
+	<div class="container">
+		@if ($errors->any())
+		    <div class="alert alert-danger" id="errors">
+		        <ul>
+		            @foreach ($errors->all() as $error)
+		                <li>{{ $error }}</li>
+		            @endforeach
+		        </ul>
+		    </div>
+		@endif
+		@if (session('status'))
+		    <div class="alert alert-success" id="flash">
+		        {{ session('status') }}
+		    </div>
+		@endif
+		
+	</div>
  
     @yield('content')
 
 	
 	
 @yield('pagejs')
+
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-	var bar = document.querySelector(".toggle-bar");
-	var nav = document.querySelector(".topnav ul");
-
-	bar.addEventListener('click', function(){
-		console.log(nav.style.display);
-		if(nav.style.display == ''){
-			nav.style.display = 'block';
-
-		}else{
-			nav.style.display = '';
-		};
-	});
+	$('#errors').fadeOut(10000);
+	$('#flash').fadeOut(10000);
 </script>
 </body>
 </html>
