@@ -6,8 +6,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Monteserrat', sans-serif;
 }
 
+
 .bold{
   font-weight: bold;
+}
+
+.white-anchor a {
+  color: #00ffff;
+}
+
+.white-anchor a:hover {
+  color: #ffffff;
 }
 
 /* The Modal (background) */
@@ -253,6 +262,28 @@ h1, h2, h3, h4, h5, h6 {
 .business-box-border {
   border-top: 20px solid #001f3f;
 }
+
+/* navigation column in blogs */
+
+.nav-pills .nav-link.active {
+
+  background-color: #001f3f;
+
+}
+
+.nav-pills .nav-link {
+  font-size: 130%;
+  color: #001f3f;
+}
+
+@media only screen and (max-width: 600px){
+
+  #sidebar{ 
+    display: none;
+   }
+}
+
+
 
 
 

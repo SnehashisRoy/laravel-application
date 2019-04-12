@@ -20,7 +20,8 @@ use GuzzleHttp\Client as GuzzleClient;
 
 Route::get('/', 'Bangla\HomeController@home');
 Route::get('/businesses/{category}', 'Bangla\CompanyController@businessesByCategory');
-Route::get('/blogs', 'Bangla\BlogsController@blogs');
+Route::get('/blogs/{cat_id?}', 'Bangla\BlogsController@index');
+Route::get('/blog/{slug}', 'Bangla\BlogsController@blog');
 
 // Banglatoronto Admin
 
