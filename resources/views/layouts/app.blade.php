@@ -42,9 +42,11 @@
 		<div class="toggle-bar"><i class="fas fa-bars"></i></div>
 
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Blogs</a></li>
-			<li id='click-contact-1'><a href="#">Contact Us</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/blogs">Blogs</a></li>
+			<li><a href="#">Rent a house</a></li>
+			<li><a href="/">Community Businesses</a></li>
+			<li><a href="/contact-us">Contact Us</a></li>
 		</ul>
 
 	</div>
@@ -52,6 +54,37 @@
 	
  
     @yield('content')
+  <!---footer-->
+  <div class="row bgprimary white p-4 pl-5">
+
+       
+     <div class="col col-md-6 text-center">
+       <ul class="business-list" style="list-style: none;">
+         <li><a href="/contact-us" class="white"> Contact Us</a></li>
+         <li><a href="/blogs" class="white"> Blogs</a></li>
+         <li><a href="#" class="white"> Rent Your House</a></li>
+         
+         
+       </ul>
+     </div>
+     <div class="col col-md-6 social text-center">
+
+       <a href="https://www.facebook.com/banglatoronto.ca" class="white"><i class="fab fa-facebook fa-2x"></i></a>
+       <a href="https://www.pinterest.ca/banglatoronto/" class="white"><i class="fab fa-pinterest fa-2x"></i></a>
+       <a href="https://twitter.com/banglatorontoCa" class="white"><i class="fab fa-twitter fa-2x"></i></a>
+
+
+     </div>
+
+
+    
+  </div>
+  <!---end footer-->
+  <div class="text-center primary bold p-2">
+    This site is developed, managed and marketed by Web360. For your web solutions , please contact at 647745840.
+  </div>
+
+ </div>
 
 	
 	

@@ -22,6 +22,8 @@ Route::get('/', 'Bangla\HomeController@home');
 Route::get('/businesses/{category}', 'Bangla\CompanyController@businessesByCategory');
 Route::get('/blogs/{cat_id?}', 'Bangla\BlogsController@index');
 Route::get('/blog/{slug}', 'Bangla\BlogsController@blog');
+Route::get('/contact-us', 'Bangla\ContactController@show');
+Route::post('/contact-us', 'Bangla\ContactController@postContact');
 
 // Banglatoronto Admin
 

@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Monteserrat', sans-serif;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
 
 .bold{
   font-weight: bold;
@@ -17,6 +21,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .white-anchor a:hover {
   color: #ffffff;
+}
+
+/* buttons */
+
+.btn-dark {
+  background-color: #001f3f;
+}
+.btn-dark:hover {
+  background-color: #001f3f;
+  opacity: 0.9;
 }
 
 /* The Modal (background) */
@@ -81,6 +95,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
 }
 
+.validation-message ul {
+    list-style: none;
+}
 /* top navigation bar */
 
 /*.topnav {
@@ -176,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* hero image and text */
 
-.hero-image-1 {
+/*.hero-image-1 {
       background-image: url('/images/businesses.jpg'); 
       height: 600px;
       background-position: center;
@@ -192,45 +209,43 @@ h1, h2, h3, h4, h5, h6 {
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
+}*/
+
+.hero-image {
+
+  background-image: url('/images/Toronto.jpg'); 
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; 
+  align-items: center; 
+  justify-content: 
+  space-around;
+
 }
 
-.hero-div-1 {
-        padding: 0 50px 50px 100px;
-      }
-
-.hero-div-2 {
-       padding: 0 100px 50px 50px;
-     }
 
 .hero-text {
-     text-align: center;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     color: white;
-     padding: 20px;
-     text-shadow: 1px 5px 5px black;
+  font-size: 40px;
+  color: #001f3f; 
+  text-shadow: 1px 1px 5px #ffffff;
 }
 
 
 @media only screen and (max-width: 600px){
-      
-      .hero-image-1 {
-        height: 400px;
-      }
 
-      .hero-div-1 {
-        padding: 10px;
-      }
+    .hero-image {
+      height: 400px;
+      display: flex; 
+      flex-direction: column;
+    }
 
-      .hero-div-2 {
-        padding: 10px;
-      }
+    .hero-text {
 
-      .hero-image-2 {
-        height: 400px;
-      }
+      font-size: 28px;
+
+    }
 
 
 }
