@@ -44,7 +44,7 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/blogs">Blogs</a></li>
-			<li><a href="#">Rent a house</a></li>
+			<li><a href="/map-view">Rent a house</a></li>
 			<li><a href="/">Community Businesses</a></li>
 			<li><a href="/contact-us">Contact Us</a></li>
 		</ul>

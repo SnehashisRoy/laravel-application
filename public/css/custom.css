@@ -33,6 +33,19 @@ p {
   opacity: 0.9;
 }
 
+.button-primary {
+
+  color: #ffffff ;
+  background-color: #001f3f;
+
+}
+.button-primary:hover {
+  color: #ffffff ;
+  background-color: #001f3f;
+  opacity: 0.9;
+
+}
+
 /* The Modal (background) */
 .modal {
   position: fixed; /* Stay in place */

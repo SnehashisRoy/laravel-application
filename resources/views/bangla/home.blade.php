@@ -22,7 +22,7 @@
        <div class="hero-image">
          <div class="text-center">
                   <h2 class="hero-text bold">Rent a house in your community </h2>
-                 <button class="btn btn-light btn-lg bgprimary white">Connect</button>
+                 <a href="/map-view"><button class="btn btn-light btn-lg bgprimary white">Connect</button></a>
                           
          </div>
          <div class="text-center">

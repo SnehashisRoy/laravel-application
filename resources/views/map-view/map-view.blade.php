@@ -21,7 +21,7 @@
 <div id="map_view">
     <div class="container">
 
-            <div class="form-row form-inline">
+            <div class="form-row form-inline" style="display: none;">
                     <div class="form-group col-md-3">
                         <label for="minPrice">Min Price : $ ${filters.minPrice}</label>
                         <input type="range" class="custom-range" id="minPrice" min="0" max="2000" v-model="filters.minPrice">
@@ -54,7 +54,7 @@
                     </select>       
 
                 </div>
-                  <button type="button" class="btn btn-success" @click=filter() > Apply Filter</button>
+                  <button type="button" class="btn button-primary" @click=filter() > Apply Filter</button>
 
             </div>
         
@@ -92,7 +92,7 @@
                 <p> <span class="bold">Pet Friendly: </span>${listing.pet_friendly ? listing.pet_friendly : 'NA' }</p>
                 <p> <span class="bold">Parking: </span>${listing.parking ? listing.parking : 'NA' }</p>
                 <p> <span class="bold">Published On: </span>${listing.kijiji_publish_date ? listing.kijiji_publish_date : 'NA' }</p>
-                <a :href="listing.kijiji_link"><div class="btn btn-success" style="width:100%;"> Connect the Renter</div></a>
+                <a :href="listing.kijiji_link"><div class="btn button-primary" style="width:100%;"> Connect the Renter</div></a>
                 
 
             </div>
