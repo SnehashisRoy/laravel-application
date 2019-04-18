@@ -75,15 +75,21 @@
      <span class="close" @click=closeModal()>&times;</span>
      <div class="container">
          <div class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-md-3">
                 <img :src="listing.image_url" class="img-responsive" :alt="listing.title" style="width:100%;">
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-md-5">
                 <h3 class="green">${listing.title}</h3>
 
                 <p><span class="bold">Address:</span> ${listing.address}</p>
                 <p><span class="bold">Description:</span> ${listing.description}</p>
+                
+                
+                
+
+            </div>
+            <div class="col-md-4">
                 <p> <span class="bold">Price: </span>${listing.price ? listing.price : 'NA' }</p>
                 <p> <span class="bold">Size: </span>${listing.size ? listing.size : 'NA' }</p>
                 <p> <span class="bold">Bedrooms: </span>${listing.bedrooms ? listing.bedrooms : 'NA' }</p>
