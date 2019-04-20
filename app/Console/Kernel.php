@@ -24,6 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->call(function () {
+            \Log::info('worked');
+        })->everyMinute();
+    
 
         $schedule->command('get:listings https://www.kijiji.ca/rss-srp-for-rent/city-of-toronto/basement-for-rent/k0c30349001l1700273 --force')
                   ->cron('* * * * *')
