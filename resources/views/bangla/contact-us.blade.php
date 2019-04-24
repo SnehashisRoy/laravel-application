@@ -27,7 +27,7 @@
       </div>
        <!---contact us-->
        <form method="post" action="">
-        @csrf
+        {{ csrf_field() }}
         <div class="container pt-2 pb-5">
           <div class="text-center p-2">
               @if ($errors->any())
@@ -47,6 +47,7 @@
               
           </div>
           <div class="row justify-content-md-center" id="target-contact-1">
+
 
                <div class="col-md-6">
                  <div class="form-group">
