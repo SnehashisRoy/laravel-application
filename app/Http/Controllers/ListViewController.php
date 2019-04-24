@@ -9,7 +9,7 @@ class ListViewController extends Controller
 {
     public function listView(){
     	
-    	$houses = House::paginate(10);
+    	$houses = House::orderBy('created_at', 'desc')->paginate(10);
 
     	return view('list-view.list-view', [
 

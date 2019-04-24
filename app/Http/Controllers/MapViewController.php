@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\House;
 
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 
 class MapViewController extends Controller
 {
     public function mapView(){
 
-    	$houses = House::with('images')->get();
+
+        $current = Carbon::now();
+
+    	$houses = House::with('images')->where('created_at', '>', $current->subDays(4))->get();
 
     	$geo = [];
 
