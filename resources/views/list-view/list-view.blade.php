@@ -23,6 +23,11 @@
     
 
     <div class="container">
+        <div class="row">
+            <div>
+                <a href="/map-view" class="btn btn-success"> Find the house in Map</a>
+            </div>
+        </div>
 
     	@foreach($houses as $house)
     	

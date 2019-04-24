@@ -63,6 +63,7 @@
          <li><a href="/contact-us" class="white"> Contact Us</a></li>
          <li><a href="/blogs" class="white"> Blogs</a></li>
          <li><a href="#" class="white"> Rent Your House</a></li>
+         <li><a href="/list-view" class="white"> Rent A House</a></li>
          
          
        </ul>
