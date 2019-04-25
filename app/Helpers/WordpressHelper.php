@@ -7,7 +7,7 @@ class WordpressHelper {
 
     public function __construct()
     {
-        $this->blog_url = 'http://www.leverage.it';
+        $this->blog_url = 'http://blogs.bdmrat.com';
     }
 
     public function getBlogPosts()
