@@ -19,8 +19,6 @@
 
 @section('content')
 
-<div>Tes</div>
-
      
      <div class="container">
         <div class="row">
