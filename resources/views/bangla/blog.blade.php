@@ -18,25 +18,16 @@
 
 
 @section('content')
-    <div class="jumbotron text-center primary">
-
-        <h1><strong>{!!$blog->title!!}</strong></h1>
-        <div class="container">
-          <p><strong> <i>{!! $blog->excerpt !!}</i></strong></p>
-        </div>
-        
-      
-    </div>
 
      
      <div class="container">
         <div class="row">
-          <div class="col-md-6 bgprimary text-center p-4">
+          <div class="col-md-6 bgprimary text-center p-2">
 
             <h4 class="white-anchor">
               <a href="/">
                 Connect to community business 
-                <i class="fas fa-external-link-alt ml-2"></i>
+                <i class="fas fa-external-link-alt"></i>
                 
               </a>
               
@@ -44,11 +35,11 @@
             
             
           </div>
-          <div class="col-md-6 bgprimary text-center p-4">
+          <div class="col-md-6 bgprimary text-center p-2">
               <h4 class="white-anchor">
                 <a href="/">
                   Rent a house in your community 
-                  <i class="fas fa-external-link-alt ml-2"></i>
+                  <i class="fas fa-external-link-alt"></i>
                   
                 </a>
                 
@@ -56,17 +47,21 @@
           </div>
           
         </div>
-        <div class="sharethis-inline-share-buttons"></div>
+        
 
         <div class="row mt-5">
           <div class="row">
-            <div class="col-md-8 p-4">
-              <j{!! $blog->content !!}
+            <div class="col-md-9 p-4">
+              <h1 class="text-center"><strong>{!!$blog->title!!}</strong></h1>
+
+                <p class="text-center"><strong> <i>{!! $blog->excerpt !!}</i></strong></p>
+                <div class="sharethis-inline-share-buttons"></div>
+               <p class="mt-5">{!! $blog->content !!}</p>
             </div>
-            <div class="col-md-4" style="background-color: #e9ecef;">
-              <h3> Similar Posts</h3>
+            <div class="col-md-3" style="background-color: #e9ecef;">
+              <h3 class="mb-3"> <u>Similar Posts</u></h3>
               @foreach($blog->similar_blogs as $similar)
-              <h5>{{ $similar->title }}</h5>
+              <a href="/blog/{{$similar->slug}}" class="primary"><h5>{{ $similar->title }}</h5></a>
               @endforeach
 
             </div>

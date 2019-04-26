@@ -12,11 +12,11 @@ class BlogsController extends Controller
     public function index($cat_id = null){
 
     	
-    	$cats = BlogCategory::all();
+    	$cats = BlogCategory::where('category', '!=', 'uncategorized')->get();
 
     	if($cat_id){ 
 
-    		$cat = BlogCategory::findOrFail($cat_id);
+    		$cat = BlogCategory::where('category', '!=', 'uncategorized')->findOrFail($cat_id);
 
     		if($cat){
     			$blogs = $cat->blogs;
