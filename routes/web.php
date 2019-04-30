@@ -26,13 +26,18 @@ Route::get('/contact-us', 'Bangla\ContactController@show');
 Route::post('/contact-us', 'Bangla\ContactController@postContact');
 
 // Banglatoronto Admin
+Route::group(['middleware' => ['admin']], function () {
 
-Route::get('/admin/dashboard', 'Admin\DashboardController@dashboard');
-Route::get('/admin/dashboard/businesses', 'Admin\BusinessesController@index');
-Route::get('/admin/dashboard/businesses/create', 'Admin\BusinessesController@create');
-Route::post('/admin/dashboard/businesses/create', 'Admin\BusinessesController@postCreate');
-Route::get('/admin/dashboard/businesses/edit/{id}', 'Admin\BusinessesController@edit');
-Route::post('/admin/dashboard/businesses/edit/{id}', 'Admin\BusinessesController@postEdit');
+    Route::get('/admin/dashboard', 'Admin\DashboardController@dashboard');
+    Route::get('/admin/dashboard/businesses', 'Admin\BusinessesController@index');
+    Route::get('/admin/dashboard/businesses/create', 'Admin\BusinessesController@create');
+    Route::post('/admin/dashboard/businesses/create', 'Admin\BusinessesController@postCreate');
+    Route::get('/admin/dashboard/businesses/edit/{id}', 'Admin\BusinessesController@edit');
+    Route::post('/admin/dashboard/businesses/edit/{id}', 'Admin\BusinessesController@postEdit');
+
+    
+});
+
 
 
 
