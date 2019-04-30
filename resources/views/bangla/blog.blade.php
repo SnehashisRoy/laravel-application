@@ -12,7 +12,7 @@
 
 
 
-@section('title', 'Page Title')
+@section('title', 'Bangla Toronto: '. $blog->title)
 
 
 

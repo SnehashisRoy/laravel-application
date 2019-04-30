@@ -11,7 +11,7 @@
 
 
 
-@section('title', 'Page Title')
+@section('title', 'Bangla Toronto: Usefull Information for Bangla Speaking Canadian')
 
 
 

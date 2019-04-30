@@ -13,7 +13,7 @@
 
 
 
-@section('title', 'Page Title')
+@section('title', 'Contact Us: Bangla Toronto')
 
 
 

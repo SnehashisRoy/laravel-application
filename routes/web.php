@@ -51,6 +51,32 @@ Route::get('listing/{id}', 'ListViewController@getListing');
 Route::post('filter', 'MapViewController@filter');
 
 
+
+
+// SEO Redirects 
+
+Route::get('/info/{cat}/{event}/{page}', function($cat, $event, $page){
+
+    return redirect('/businesses/'.$cat , 301);
+});
+
+Route::get('/infoblog/{slug}', function($slug){
+
+    return redirect('/blog/'. $slug , 301);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/scraper', function(){
 	$client= new Goutte\Client;
 

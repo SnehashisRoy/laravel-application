@@ -11,7 +11,7 @@
 
 
 
-@section('title', ucfirst(implode(' ', explode('-', $title))))
+@section('title',  ucfirst(implode(' ', explode('-', $title))). ' in Danforth: Bangla Toronto')
 
 
 
