@@ -25,7 +25,7 @@ class BlogsController extends Controller
 
 
     	}else{
-    		$blogs = Blog::paginate(10);
+    		$blogs = Blog::orderBy('created_at', 'desc')->paginate(10);
     	}
 
 
@@ -38,6 +38,10 @@ class BlogsController extends Controller
     public function blog($slug){
 
     	$blog= Blog::where('slug', $slug)->first();
+
+        if(!$blog){
+            abort(404);
+        }
 
     	return view('bangla.blog', [
     			'blog' => $blog

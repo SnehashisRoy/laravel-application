@@ -51,7 +51,7 @@
 	  						</a>
 	  					</div>
 	  					<div class="col-12 col-md-7">	  						
-	  							<p>{!!$blog->post_intro!!} <a href="/blog/{{$blog->slug}}" class="primary">..more >></a></p>
+	  							<p>{!!$blog->excerpt!!} <a href="/blog/{{$blog->slug}}" class="primary">..more >></a></p>
 	  						
 	  					</div>	
 	  					<div class="col-12 col-md-5" style="
