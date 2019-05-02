@@ -27,7 +27,7 @@
       </div>
        <!---contact us-->
        <form method="post" action="">
-        {{ csrf_field() }}
+        @csrf
         <div class="container pt-2 pb-5">
           <div class="text-center p-2">
               @if ($errors->any())
