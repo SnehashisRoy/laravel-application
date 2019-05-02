@@ -15,6 +15,14 @@
 use Goutte\Client;
 use GuzzleHttp\Client as GuzzleClient;
 
+Route::get('test', function(Request $r){
+
+    dd(session()->token());
+
+
+
+});
+
 
 // Banglatoronto
 
