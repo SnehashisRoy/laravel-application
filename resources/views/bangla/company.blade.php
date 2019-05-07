@@ -39,7 +39,7 @@
 				<ul class="list-group">
 				  <li class="list-group-item text-center"><h4 class="primary bold">Similar businesses</h4></li>
 				  @foreach($similars as $similar)
-				  <li class="list-group-item primary"><p>{{$similar->company }}</p></li>
+				  <a href="/business/{{$similar->slug}}/{{$similar->company_slug}}"><li class="list-group-item primary"><p> <i class="far fa-hand-point-up"></i> {{$similar->company }} </p></li></a>
 				  @endforeach
 				</ul>			
 			</div>
