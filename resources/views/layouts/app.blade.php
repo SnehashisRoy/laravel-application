@@ -17,6 +17,16 @@
 	 <link href="{{ url('/css/app.css') }}" rel="stylesheet">
 	 <link href="{{ url('/css/custom.css') }}" rel="stylesheet">
 	 <script src="{{ url('/js/app.js') }}"></script>
+
+	 <!-- Global Site Tag (gtag.js) - Google Analytics -->
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+	 <script>
+	   window.dataLayer = window.dataLayer || [];
+	   function gtag(){dataLayer.push(arguments);}
+	   gtag('js', new Date());
+
+	   gtag('config', 'UA-50398498-3');
+	 </script>
 	
 	@yield('vendorcss')
 
