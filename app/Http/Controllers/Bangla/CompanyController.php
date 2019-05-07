@@ -19,4 +19,22 @@ class CompanyController extends Controller
     		'title' => @Company::where('slug', $category)->first()->slug
     	]);
     }
+
+    public function getBusiness($cat, $company){
+
+    	$company = Company::where('slug', $cat)
+    	                    ->where('company_slug', $company)
+    	                    ->first();
+    	if(!$company){
+    		abort(404);
+
+    	}
+
+    	$similarCompanies = Company::where('slug', $cat)->inRandomOrder()->take(8)->get();
+
+    	return view('bangla.company', [
+    		'company' => $company ,
+    		'similars' => $similarCompanies 
+    	]);
+    }
 }

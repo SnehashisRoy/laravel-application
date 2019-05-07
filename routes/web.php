@@ -28,6 +28,7 @@ Route::get('test', function(Request $r){
 
 Route::get('/', 'Bangla\HomeController@home');
 Route::get('/businesses/{category}', 'Bangla\CompanyController@businessesByCategory');
+Route::get('/business/{category_slug}/{company_slug}', 'Bangla\CompanyController@getBusiness');
 Route::get('/blogs/{cat_id?}', 'Bangla\BlogsController@index');
 Route::get('/blog/{slug}', 'Bangla\BlogsController@blog');
 Route::get('/contact-us', 'Bangla\ContactController@show');
@@ -45,6 +46,9 @@ Route::group(['middleware' => ['admin']], function () {
 
     
 });
+
+Route::get('admin/login', 'Admin\AuthenticationController@getlogin');
+Route::post('admin/login', 'Admin\AuthenticationController@postlogin');
 
 
 

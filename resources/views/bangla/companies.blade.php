@@ -28,7 +28,8 @@
 				<h4 class="primary bold text-center">{{$company->company}}</h4>
 				<p><span class="bold primary">Services: </span>{{$company->service}}</p>
 				<p><span class="bold primary ">Contacts: </span>{{$company->contact}}</p>
-				<p><span class="bold primary">Website: </span>Not Available</p>
+				<a href="/business/{{$company->slug}}/{{$company->company_slug}}"><button class="btn btn-dark">See Detail</button></a>
+
 
 			</div>
     		@endforeach 
