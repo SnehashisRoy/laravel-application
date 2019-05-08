@@ -23,7 +23,7 @@
 	
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-10 col-md-8 business-box-shadow mb-5 p-5 business-box-border">
+			<div class="col-12 col-md-8 business-box-shadow mb-5 p-5 business-box-border">
 				<h4 class="primary bold text-center">{{$company->company}}</h4>
 				<p><span class="bold primary">Services: </span>{{$company->service}}</p>
 				<p><span class="bold primary ">Contacts: </span>{{$company->contact}}</p>
@@ -33,7 +33,7 @@
 				
 
 			</div>
-			<div class="col-2 col-md-4 mb-5">
+			<div class="col-12 col-md-4 mb-5">
 
 					
 				<ul class="list-group">
