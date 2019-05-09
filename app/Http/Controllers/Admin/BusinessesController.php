@@ -47,7 +47,8 @@ class BusinessesController extends Controller
 
     	 $company->company = $r->company;
     	 $company->service = $r->service;
-    	 $company->contact = $r->contact;
+         $company->contact = $r->contact;
+    	 $company->description = $r->description;
     	 $company->slug = $r->category;
 
     	 $company->save();
@@ -90,7 +91,8 @@ class BusinessesController extends Controller
 
     	 $company->company = $r->company;
     	 $company->service = $r->service;
-    	 $company->contact = $r->contact;
+         $company->contact = $r->contact;
+    	 $company->description = $r->description;
     	 $company->slug = $r->category;
 
     	 $company->save();

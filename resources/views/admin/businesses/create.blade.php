@@ -35,6 +35,10 @@
 	    <label for="service">Services</label>
 	    <input type="text" class="form-control" id="service" name="service" value="{{ old('service')}}" placeholder="Services">
 	  </div>
+	  <div class="form-group">
+	    <label for="description">Description</label>
+	    <textarea type="text" name="description" class="form-control" rows="8"> {{old('description')}}</textarea>
+	  </div>
 	  
 	  <div class="form-group">
 	      <label for="category">Category</label>
