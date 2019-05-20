@@ -24,6 +24,14 @@
 
 
         <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-md-4 ">
+                    <a href="/map-view"><div class="btn btn-success" style="width:100%;"> Find a house in Map</div></a>
+                    
+                </div>
+                
+            </div>
+            
          <div class="row" style="margin-top: 50px;">
             <div class="col-sm-12 col-md-4">
                 <img src = "{{$house->image_url}}" class="img-responsive" alt="{{$house->title}}" style="width:100%;">
@@ -41,7 +49,7 @@
                 <p> <span class="bold">Pet Friendly: </span>{{$house->pet_friendly ? $house->pet_friendly : 'NA' }}</p>
                 <p> <span class="bold">Parking: </span>{{$house->parking ? $house->parking : 'NA' }}</p>
                 <p> <span class="bold">Published On: </span>{{$house->kijiji_publish_date ? $house->kijiji_publish_date : 'NA' }}</p>
-                <a href="{{$house->kijiji_link}}"><div class="btn btn-success" style="width:100%;"> Connect the Renter</div></a>
+                <a href="{{$house->kijiji_link}}"><div class="btn btn-success mb-5" style="width:100%;"> Connect the Renter</div></a>
                 
 
             </div>
