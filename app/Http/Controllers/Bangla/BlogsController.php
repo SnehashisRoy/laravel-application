@@ -40,7 +40,8 @@ class BlogsController extends Controller
     	$blog= Blog::where('slug', $slug)->first();
 
         if(!$blog){
-            abort(404);
+
+            return redirect('/blogs' , 301);
         }
 
     	return view('bangla.blog', [
