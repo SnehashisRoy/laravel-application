@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::post('sign-up', 'Api\AuthController@signUp');
 
 
-Route::group(['middleware' => ['auth:api']], function () {
+Route::group(['middleware' => [/*'auth:api'*/]], function () {
 
 	Route::get('listings', 'Api\ListingsController@getListings');
 	Route::post('listing/create', 'Api\ListingsController@createListing');
