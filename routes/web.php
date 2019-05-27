@@ -35,6 +35,17 @@ Route::get('/blog/{slug}', 'Bangla\BlogsController@blog');
 Route::get('/contact-us', 'Bangla\ContactController@show');
 Route::post('/contact-us', 'Bangla\ContactController@postContact');
 
+// create listing
+Route::group(['middleware' => []], function () {
+
+    Route::get('/create-listing', 'Bangla\CreateListingController@create');
+    Route::post('/create-listing', 'Bangla\CreateListingController@postCreate');
+
+    
+});
+
+
+
 // Banglatoronto Admin
 Route::group(['middleware' => ['admin']], function () {
 
