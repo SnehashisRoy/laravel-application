@@ -11,12 +11,15 @@ class ListViewController extends Controller
     public function listView(){
 
 
-        $location =geoip($_SERVER['REMOTE_ADDR']);
+     //    $location =geoip($_SERVER['REMOTE_ADDR']);
 
-        dd($location);
+     //    dd($location);
 
-    	$houses = House::where('city', $location->city)
-                       ->orderBy('created_at', 'desc')->paginate(10);
+    	// $houses = House::where('city', $location->city)
+     //                   ->orderBy('created_at', 'desc')->paginate(10);
+
+        $houses = House::orderBy('created_at', 'desc')->paginate(10);
+
 
     	return view('list-view.list-view', [
 
