@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
 
-        $schedule->command('get:listings https://www.kijiji.ca/rss-srp-for-rent/city-of-toronto/basement-for-rent/k0c30349001l1700273')
+        $schedule->command('get:listings https://www.kijiji.ca/rss-srp-canada/basement-for-rent/k0l0')
                   ->cron('* * * * *')
                   ->withoutOverlapping();                  ;
     }
