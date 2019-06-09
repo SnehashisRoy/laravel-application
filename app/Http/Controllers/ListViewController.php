@@ -10,7 +10,7 @@ class ListViewController extends Controller
 {
     public function listView(){
 
-
+        dd($_SERVER['REMOTE_ADDR']);
 
         $location =geoip($_SERVER['REMOTE_ADDR']);
 
