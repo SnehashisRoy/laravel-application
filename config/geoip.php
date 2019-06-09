@@ -141,18 +141,18 @@ return [
 
     'default_location' => [
         'ip' => '127.0.0.0',
-        'iso_code' => 'US',
-        'country' => 'United States',
-        'city' => 'New Haven',
-        'state' => 'CT',
-        'state_name' => 'Connecticut',
-        'postal_code' => '06510',
-        'lat' => 41.31,
-        'lon' => -72.92,
+        'iso_code' => 'CAN',
+        'country' => 'Canada',
+        'city' => 'Toronto',
+        'state' => 'ON',
+        'state_name' => 'Ontario',
+        'postal_code' => 'M4C2H2',
+        'lat' => 43.6532, 
+        'lon' => -79.3832,
         'timezone' => 'America/New_York',
         'continent' => 'NA',
         'default' => true,
-        'currency' => 'USD',
+        'currency' => 'CAD',
     ],
 
 ];
