@@ -13,6 +13,8 @@ class ListViewController extends Controller
 
         $location =geoip($_SERVER['REMOTE_ADDR']);
 
+        dd($location->city);
+
     	$houses = House::where('city', 'like', $location->city)
                        ->orderBy('created_at', 'desc')->paginate(10);
 
