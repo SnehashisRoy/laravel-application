@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\House;
+use \Torann\GeoIP\Facades\GeoIP;
 
 class ListViewController extends Controller
 {
     public function listView(){
-    	
-    	$houses = House::orderBy('created_at', 'desc')->paginate(10);
+
+
+
+        $location =geoip($_SERVER['REMOTE_ADDR']);
+
+    	$houses = House::where('city', $location->city)
+                       ->orderBy('created_at', 'desc')->paginate(10);
 
     	return view('list-view.list-view', [
 
