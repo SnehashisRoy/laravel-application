@@ -13,10 +13,13 @@ class ListViewController extends Controller
 
         $location =geoip($_SERVER['REMOTE_ADDR']);
 
-        dd($location->city);
-
     	$houses = House::where('city', 'like', $location->city)
                        ->orderBy('created_at', 'desc')->paginate(10);
+       
+        if(!count($houses)){
+            return redirect('/map-view');
+        }
+
 
     	return view('list-view.list-view', [
 
