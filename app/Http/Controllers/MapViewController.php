@@ -57,11 +57,12 @@ class MapViewController extends Controller
     		];
     	}
 
-    	
+        $location = geoip($_SERVER['REMOTE_ADDR']);
 
     	return view('map-view.map-view', [
 
-    		'geo' => $geo
+    		'geo' => $geo,
+            'userLocation' => ['lat' => $location->lat, 'lon' => $location->lon]
 
     	]);
     }

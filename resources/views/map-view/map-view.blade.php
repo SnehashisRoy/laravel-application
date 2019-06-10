@@ -119,7 +119,8 @@
 
 
 	<script type="text/javascript">
-		let geoJsonFromBlade = {!! json_encode($geo)  !!}
+		let geoJsonFromBlade = {!! json_encode($geo)  !!};
+    let userLocation = {!! json_encode($userLocation) !!}
 	</script>
 
 	<script src="{{ url('/js/page/map.js')}}"></script>
