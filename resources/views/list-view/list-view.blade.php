@@ -24,8 +24,19 @@
 
     <div class="container">
         <div class="row">
-            <div>
+            <div class="col">
                 <a href="/map-view" class="btn btn-success"> Find the house in Map</a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <form method="POST" class="form-inline">
+                    @csrf
+                  <label class="sr-only" for="postal">Name</label>
+                  <input type="text" name="postal" class="form-control mb-2 mr-sm-2" id="postal" placeholder="Search by Postal Code">
+                  
+                  <button type="submit" class="btn btn-success mb-2">Submit</button>
+                </form>
             </div>
         </div>
 

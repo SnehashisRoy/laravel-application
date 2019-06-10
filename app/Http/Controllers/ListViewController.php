@@ -18,6 +18,27 @@ class ListViewController extends Controller
     	]);
     }
 
+    public function postListView(Request $r){
+
+        $this->validate($r,[
+
+            'postal' => 'required'
+        
+        ]);
+
+        $postal = trim(substr($r->postal, 0, 3));
+
+        $houses = House::where('postal', 'like', $postal.'%')
+                        ->orderBy('created_at', 'desc')->paginate(10);
+
+        return view('list-view.list-view', [
+
+            'houses' => $houses
+
+        ]);
+
+    }
+
     public function getListing($id){
 
     	$house = House::findOrFail($id);
