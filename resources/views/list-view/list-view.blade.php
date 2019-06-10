@@ -30,7 +30,7 @@
         </div>
         <div class="row mt-5">
             <div class="col">
-                <form method="POST" class="form-inline">
+                <form method="POST" class="form-inline" action="/list-view">
                     @csrf
                   <label class="sr-only" for="postal">Name</label>
                   <input type="text" name="postal" class="form-control mb-2 mr-sm-2" id="postal" placeholder="Search by Postal Code">
