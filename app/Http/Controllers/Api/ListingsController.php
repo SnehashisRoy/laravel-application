@@ -14,7 +14,7 @@ class ListingsController extends Controller
         //$listings = House::with('images')->where('user_id', \Auth::id())->get();
         $listings = House::with('images')->take(5)->get();
 
-        return  response()->json(['success' => true, 'data' => $listings]);
+        return  response()->json($listings);
     }
 
     public function createListing(Request $r, GeocodingInterface $geo){
