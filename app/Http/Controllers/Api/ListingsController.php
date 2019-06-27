@@ -117,7 +117,7 @@ class ListingsController extends Controller
 
         $listing = House::with('images')->find($house->id);
 
-    	return  response()->json([]);
+    	return  response()->json($listing);
 
 
 
