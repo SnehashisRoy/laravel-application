@@ -54,7 +54,7 @@ class ListingsController extends Controller
 
         \Log::info($id);
 
-        dd($r);
+        
 
 
     	$house = House::findOrFail($id);

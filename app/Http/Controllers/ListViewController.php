@@ -41,7 +41,16 @@ class ListViewController extends Controller
 
     public function getListing($id){
 
-    	$house = House::findOrFail($id);
+    	$house = House::find($id);
+
+        if(!$house){
+
+            return redirect('list-view');
+        }
+
+        $house->views +=1;
+
+        $house->save();
 
     	return view('list-view.listing', [
 
