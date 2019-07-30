@@ -76,9 +76,12 @@ Route::post('/scraper/create-house', 'Admin\ScraperController@postHouseDetail');
 
 Route::get('map-view', 'MapViewController@mapView');
 Route::get('list-view', 'ListViewController@listView');
+Route::get('rent-basement-house-room-in/{city}', 'ListViewController@listViewByCity');
 Route::post('list-view', 'ListViewController@PostListView');
 Route::get('listing/{id}', 'ListViewController@getListing');
 Route::post('filter', 'MapViewController@filter');
+
+
 
 
 

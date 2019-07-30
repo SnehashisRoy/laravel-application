@@ -13,9 +13,26 @@ class ListViewController extends Controller
 
     	return view('list-view.list-view', [
 
-    		'houses' => $houses
+    		'houses' => $houses, 
+            'city' => 'Toronto'
 
     	]);
+    }
+
+    public function listViewByCity($city){
+
+        $houses = House::where('city', 'like', $city)
+                         ->orderBy('created_at', 'desc')->paginate(10);
+
+        return view('list-view.list-view', [
+
+            'houses' => $houses,
+            'city' => $city
+
+        ]);
+
+
+
     }
 
     public function postListView(Request $r){

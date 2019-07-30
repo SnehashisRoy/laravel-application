@@ -11,7 +11,7 @@
 
 
 
-@section('title', 'Bangla Toronto: Rent a basement / house / room  in  Toronto')
+@section('title', 'Bangla Toronto: Rent a basement / house / room  in '.  $city)
 
 
 
@@ -53,7 +53,7 @@
     			<p> <span class="bold">Address: </span>{{ $house->address}}</p>
     			<p> <span class="bold">Description: </span>{{substr($house->description, 0, 300)}}...</p>
     			<p> <span class="bold">Price: </span>{{ $house->price}}</p>
-    			<a href="listing/{{$house->id}}" style="text-decoration:none;">
+    			<a href="/listing/{{$house->id}}" style="text-decoration:none;">
     				<div class="btn btn-success"> See Detail</div>
     			</a>
 
