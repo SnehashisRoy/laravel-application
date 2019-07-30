@@ -125,6 +125,20 @@ class ListingsController extends Controller
 
     }
 
+    public function deleteListingById($id){
+
+        $listing = House::find($id);
+
+        $listing->delete();
+
+        return  response()->json($listing);
+
+
+
+
+
+    }
+
     public function uploadImageById(Request $r, $id){
 
                     foreach($r['images'] as $image){

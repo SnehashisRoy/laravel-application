@@ -11,7 +11,7 @@
 
 
 
-@section('title', 'Bangla Toronto: Rent a House in  Toronto')
+@section('title', 'Bangla Toronto: Rent a basement / house / room  in  Toronto')
 
 
 
