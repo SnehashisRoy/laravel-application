@@ -50,7 +50,8 @@ class ListViewController extends Controller
 
         return view('list-view.list-view', [
 
-            'houses' => $houses
+            'houses' => $houses,
+            'city' => 'Toronto'
 
         ]);
 
