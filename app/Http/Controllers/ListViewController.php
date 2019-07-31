@@ -24,6 +24,10 @@ class ListViewController extends Controller
         $houses = House::where('city', 'like', $city)
                          ->orderBy('created_at', 'desc')->paginate(10);
 
+        if($houses->count() < 1){
+            redirect('list-view');
+        }
+
         return view('list-view.list-view', [
 
             'houses' => $houses,
@@ -33,6 +37,15 @@ class ListViewController extends Controller
 
 
 
+    }
+
+    public function getCities(){
+        $cities = House::select('city')->distinct()->orderBy('city')->get();
+
+        return view('list-view.cities', [
+            'cities' => $cities
+
+        ]);
     }
 
     public function postListView(Request $r){

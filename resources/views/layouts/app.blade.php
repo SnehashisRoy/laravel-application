@@ -74,6 +74,7 @@
          <li><a href="/blogs" class="white"> Blogs</a></li>
          <li><a href="#" class="white"> Rent Your House</a></li>
          <li><a href="/list-view" class="white"> Rent A House</a></li>
+         <li><a href="/list-city" class="white"> Rent A House In Your City</a></li>
          
          
        </ul>
