@@ -50,6 +50,7 @@ class BusinessesController extends Controller
          $company->contact = $r->contact;
     	 $company->description = $r->description;
     	 $company->slug = $r->category;
+         $company->company_slug = str_slug($company->company , '-');
 
     	 $company->save();
 
