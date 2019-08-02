@@ -14,15 +14,15 @@
 
 use Goutte\Client;
 use GuzzleHttp\Client as GuzzleClient;
-use Spatie\Sitemap\SitemapGenerator;
+// use Spatie\Sitemap\SitemapGenerator;
 
-Route::get('sitemap', function(Request $r){
+// Route::get('sitemap', function(Request $r){
 
-    SitemapGenerator::create('http://www.banglatoronto.ca')->writeToFile('/var/www/rentBasement/public/sitemap.xml');
+//     SitemapGenerator::create('http://www.banglatoronto.ca')->writeToFile('/var/www/rentBasement/public/sitemap.xml');
 
 
 
-});
+// });
 
 
 // Banglatoronto
