@@ -45,20 +45,8 @@
 
     	
     	
-    	<div class="row justify-content-right" style="margin-top: 30px; border-bottom: 1px solid grey; padding-bottom: 10px;">
-    		<div class="col-4">
-                <div id="738433747">
-                    <script type="text/javascript">
-                        try {
-                            window._mNHandle.queue.push(function (){
-                                window._mNDetails.loadTag("738433747", "160x600", "738433747");
-                            });
-                        }
-                        catch (error) {}
-                    </script>
-                </div>
-    			
-    		</div>
+    	<div class="row" style="margin-top: 30px; border-bottom: 1px solid grey; padding-bottom: 10px;">
+    		
             
     		<div class="col-8">
                 @foreach($houses as $house)
@@ -79,6 +67,19 @@
 
     			
     		</div>
+            <div class="col-4">
+                <div id="738433747">
+                    <script type="text/javascript">
+                        try {
+                            window._mNHandle.queue.push(function (){
+                                window._mNDetails.loadTag("738433747", "160x600", "738433747");
+                            });
+                        }
+                        catch (error) {}
+                    </script>
+                </div>
+                
+            </div>
             
     	</div>
     	
