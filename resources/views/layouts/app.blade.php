@@ -44,16 +44,9 @@
 	
 </head>
 <body>
-	<div id="127812786">
-	    <script type="text/javascript">
-	        try {
-	            window._mNHandle.queue.push(function (){
-	                window._mNDetails.loadTag("127812786", "728x90", "127812786");
-	            });
-	        }
-	        catch (error) {}
-	    </script>
-	</div>
+	
+	
+</div>
 	<div class="bgprimary text-center white" >
 		<div style=" padding: 10px 0 0 0; letter-spacing: 3px;font-weight: bold;font-size: 180%;"> BanglaToronto </div>
 	</div>
@@ -76,6 +69,22 @@
 		</ul>
 
 	</div>
+
+	<div class="container">
+		<div id="127812786">
+		    <script type="text/javascript">
+		        try {
+		            window._mNHandle.queue.push(function (){
+		                window._mNDetails.loadTag("127812786", "728x90", "127812786");
+		            });
+		        }
+		        catch (error) {}
+		    </script>
+		</div>
+		
+	</div>
+
+	
 	
 	
  
