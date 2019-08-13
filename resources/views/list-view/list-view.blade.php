@@ -43,14 +43,30 @@
             </div>
         </div>
 
-    	@foreach($houses as $house)
     	
-    	<div class="row" style="margin-top: 30px; border-bottom: 1px solid grey; padding-bottom: 10px;">
+    	
+    	<div class="row justify-content-right" style="margin-top: 30px; border-bottom: 1px solid grey; padding-bottom: 10px;">
     		<div class="col-4">
-    			<img src="{{$house->image_url}}" alt="{{$house->title}}" style="width: 100%; height: 300px;">
+                <div id="738433747">
+                    <script type="text/javascript">
+                        try {
+                            window._mNHandle.queue.push(function (){
+                                window._mNDetails.loadTag("738433747", "160x600", "738433747");
+                            });
+                        }
+                        catch (error) {}
+                    </script>
+                </div>
+    			
     			
     		</div>
+            
     		<div class="col-8">
+                @foreach($houses as $house)
+                <div class="mb-5">
+                    <img src="{{$house->image_url}}" alt="{{$house->title}}" style="width: 100%; height: 300px;">
+                </div>
+                <div class="mb-5">
     			<h3 class="bold green">{{$house->title}}</h3>
 
     			<p> <span class="bold">Address: </span>{{ $house->address}}</p>
@@ -59,11 +75,14 @@
     			<a href="/listing/{{$house->id}}" style="text-decoration:none;">
     				<div class="btn btn-success"> See Detail</div>
     			</a>
+                </div>
+                @endforeach
 
     			
     		</div>
+            
     	</div>
-    	@endforeach
+    	
 
     	<div style="margin-top: 40px;">{{$houses->links()}}</div>
 
