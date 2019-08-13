@@ -89,7 +89,7 @@
 	
  
     @yield('content')
-    <div class="container">
+    <div class="container mb-5">
     	<div id="427268205">
     	    <script type="text/javascript">
     	        try {
