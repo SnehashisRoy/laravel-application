@@ -74,16 +74,17 @@
 	</div>
 
 	<div class="container">
-		<div id="818826884">
+		<div id="127812786">
 		    <script type="text/javascript">
 		        try {
 		            window._mNHandle.queue.push(function (){
-		                window._mNDetails.loadTag("818826884", "728x90", "818826884");
+		                window._mNDetails.loadTag("127812786", "728x90", "127812786");
 		            });
 		        }
 		        catch (error) {}
 		    </script>
 		</div>
+		
 	</div>
 
 	
@@ -92,16 +93,17 @@
  
     @yield('content')
     <div class="container mb-5">
-    	<div id="127812786">
+    	<div id="818826884">
     	    <script type="text/javascript">
     	        try {
     	            window._mNHandle.queue.push(function (){
-    	                window._mNDetails.loadTag("127812786", "728x90", "127812786");
+    	                window._mNDetails.loadTag("818826884", "728x90", "818826884");
     	            });
     	        }
     	        catch (error) {}
     	    </script>
     	</div>
+    	
     	
     </div>
   <!---footer-->
