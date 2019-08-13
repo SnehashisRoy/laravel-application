@@ -27,6 +27,14 @@
 
 	   gtag('config', 'UA-50398498-3');
 	 </script>
+	 <!---Media.net--->
+	 <script type="text/javascript">
+	     window._mNHandle = window._mNHandle || {};
+	     window._mNHandle.queue = window._mNHandle.queue || [];
+	     medianet_versionId = "3121199";
+	 </script>
+
+	 <script src="//contextual.media.net/dmedianet.js?cid=8CUP0I814" async="async"></script>
 	 <script type="text/javascript">
 	     window._mNHandle = window._mNHandle || {};
 	     window._mNHandle.queue = window._mNHandle.queue || [];
