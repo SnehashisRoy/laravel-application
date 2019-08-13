@@ -58,7 +58,6 @@
                     </script>
                 </div>
     			
-    			
     		</div>
             
     		<div class="col-8">
