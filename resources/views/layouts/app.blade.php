@@ -27,6 +27,12 @@
 
 	   gtag('config', 'UA-50398498-3');
 	 </script>
+	 <script type="text/javascript">
+	     window._mNHandle = window._mNHandle || {};
+	     window._mNHandle.queue = window._mNHandle.queue || [];
+	     medianet_versionId = "3121199";
+	 </script>
+	 <script src="//contextual.media.net/dmedianet.js?cid=8CUP0I814" async="async"></script>
 	
 	@yield('vendorcss')
 
@@ -38,6 +44,16 @@
 	
 </head>
 <body>
+	<div id="127812786">
+	    <script type="text/javascript">
+	        try {
+	            window._mNHandle.queue.push(function (){
+	                window._mNDetails.loadTag("127812786", "728x90", "127812786");
+	            });
+	        }
+	        catch (error) {}
+	    </script>
+	</div>
 	<div class="bgprimary text-center white" >
 		<div style=" padding: 10px 0 0 0; letter-spacing: 3px;font-weight: bold;font-size: 180%;"> BanglaToronto </div>
 	</div>
