@@ -25,6 +25,15 @@
 
         <div class="container">
             <div class="row justify-content-md-center">
+                
+                <div class="col col-md-4 ">
+                    <a href="/rent-basement-house-room-in/{{@$house->city}}"><div class="btn btn-success" style="width:100%;"> Rent a house in {{@$house->city}}</div></a>
+                    
+                </div>
+                <div class="col col-md-4 ">
+                    <a href="/list-city"><div class="btn btn-success" style="width:100%;"> House in other Cities</div></a>
+                    
+                </div>
                 <div class="col col-md-4 ">
                     <a href="/map-view"><div class="btn btn-success" style="width:100%;"> Find a house in Map</div></a>
                     
@@ -33,7 +42,7 @@
             </div>
             
          <div class="row" style="margin-top: 50px;">
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-4 mb-3">
                 <img src = "{{$house->image_url}}" class="img-responsive" alt="{{$house->title}}" style="width:100%;">
             </div>
 

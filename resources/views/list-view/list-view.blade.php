@@ -28,7 +28,7 @@
                 <a href="/map-view" class="btn btn-success"> Find the house in Map</a>
             </div>
             <div class="col">
-                <a href="/list-city" class="btn btn-success"> Find the house in your city</a>
+                <a href="/list-city" class="btn btn-success"> Find  house in your city</a>
             </div>
         </div>
         <div class="row mt-5">
