@@ -50,11 +50,11 @@
                 <h2 class="primary">{{$house->title}}</h2>
                 <p><span class="bold">Addreess:</span> {{$house->address}}</p>
                 <p><span class="bold">Description:</span> {{$house->description}}</p>
-                <div id="676924804">
+                <div id="127812786">
                     <script type="text/javascript">
                         try {
                             window._mNHandle.queue.push(function (){
-                                window._mNDetails.loadTag("676924804", "728x90", "676924804");
+                                window._mNDetails.loadTag("127812786", "728x90", "127812786");
                             });
                         }
                         catch (error) {}
