@@ -50,16 +50,7 @@
                 <h2 class="primary">{{$house->title}}</h2>
                 <p><span class="bold">Addreess:</span> {{$house->address}}</p>
                 <p><span class="bold">Description:</span> {{$house->description}}</p>
-                <div id="427268205">
-                    <script type="text/javascript">
-                        try {
-                            window._mNHandle.queue.push(function (){
-                                window._mNDetails.loadTag("427268205", "300x250", "427268205");
-                            });
-                        }
-                        catch (error) {}
-                    </script>
-                </div>
+                <!---Add here-->
                 <p> <span class="bold">Price: </span>{{$house->price ? $house->price : 'NA' }}</p>
                 <p> <span class="bold">Size: </span>{{$house->size ? $house->size : 'NA' }}</p>
                 <p> <span class="bold">Bedrooms: </span>{{$house->bedrooms ? $house->bedrooms : 'NA' }}</p>

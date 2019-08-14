@@ -66,16 +66,7 @@
                     @if ($loop->first)
                     <div class="mb-5">
 
-                        <div id="427268205">
-                            <script type="text/javascript">
-                                try {
-                                    window._mNHandle.queue.push(function (){
-                                        window._mNDetails.loadTag("427268205", "300x250", "427268205");
-                                    });
-                                }
-                                catch (error) {}
-                            </script>
-                        </div>
+                       
                     </div>
                     @endif
                 @endforeach
