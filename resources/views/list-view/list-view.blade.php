@@ -45,10 +45,10 @@
 
     	
     	
-    	<div class="row" style="margin-top: 30px; border-bottom: 1px solid grey; padding-bottom: 10px;">
+    	<div class="row justify-content-md-center" style="margin-top: 30px; border-bottom: 1px solid grey; padding-bottom: 10px;">
     		
             
-    		<div class="col-8">
+    		<div class="col-12 col-md-8">
                 @foreach($houses as $house)
                 <div class="mb-5">
                     <img src="{{$house->image_url}}" alt="{{$house->title}}" style="width: 100%; height: 300px;">
@@ -63,23 +63,22 @@
     				<div class="btn btn-success"> See Detail</div>
     			</a>
                 </div>
+                    @if ($loop->first)
+                        <div id="427268205">
+                            <script type="text/javascript">
+                                try {
+                                    window._mNHandle.queue.push(function (){
+                                        window._mNDetails.loadTag("427268205", "300x250", "427268205");
+                                    });
+                                }
+                                catch (error) {}
+                            </script>
+                        </div>
+                    @endif
                 @endforeach
 
     			
     		</div>
-            <div class="col-4">
-                <div id="826404458">
-                    <script type="text/javascript">
-                        try {
-                            window._mNHandle.queue.push(function (){
-                                window._mNDetails.loadTag("826404458", "160x600", "826404458");
-                            });
-                        }
-                        catch (error) {}
-                    </script>
-                </div>
-                
-            </div>
             
     	</div>
     	
