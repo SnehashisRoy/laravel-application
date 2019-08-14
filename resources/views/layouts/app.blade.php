@@ -27,15 +27,6 @@
 
 	   gtag('config', 'UA-50398498-3');
 	 </script>
-	 <!---Media.net--->
-	 <script type="text/javascript">
-	     window._mNHandle = window._mNHandle || {};
-	     window._mNHandle.queue = window._mNHandle.queue || [];
-	     medianet_versionId = "3121199";
-	 </script>
-
-	 <script src="//contextual.media.net/dmedianet.js?cid=8CUP0I814" async="async"></script>
-
 	
 	@yield('vendorcss')
 
@@ -74,38 +65,12 @@
 	</div>
 
 	<div class="container">
-		<div id="127812786">
-		    <script type="text/javascript">
-		        try {
-		            window._mNHandle.queue.push(function (){
-		                window._mNDetails.loadTag("127812786", "728x90", "127812786");
-		            });
-		        }
-		        catch (error) {}
-		    </script>
-		</div>
 		
 	</div>
 
-	
-	
-	
  
     @yield('content')
-    <div class="container mb-5">
-    	<div id="818826884">
-    	    <script type="text/javascript">
-    	        try {
-    	            window._mNHandle.queue.push(function (){
-    	                window._mNDetails.loadTag("818826884", "728x90", "818826884");
-    	            });
-    	        }
-    	        catch (error) {}
-    	    </script>
-    	</div>
-    	
-    	
-    </div>
+   
   <!---footer-->
   <div class="row bgprimary white p-4 pl-5">
 
