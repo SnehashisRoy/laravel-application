@@ -24,6 +24,11 @@ class House extends Model
         return  Carbon::now()->diffInDays($this->created_at) > 15 ;
 
     }
+
+    public function getTimePassedAttribute(){
+
+    	return $this->created_at->diffForHumans(Carbon::now());
+    }
 	
 	
 }

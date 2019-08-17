@@ -48,6 +48,7 @@
 
             <div class="col-sm-12 col-md-8">
                 <h2 class="primary">{{$house->title}}</h2>
+                <p class="alert-danger"><span class="bold">Posted:</span> {{$house->time_passed}} . To find the recent ads , click the button below.</p>
                 <p><span class="bold">Addreess:</span> {{$house->address}}</p>
                 <p><span class="bold">Description:</span> {{$house->description}}</p>
                 <!---Add here-->
@@ -61,7 +62,6 @@
                 <p> <span class="bold">Published On: </span>{{$house->kijiji_publish_date ? $house->kijiji_publish_date : 'NA' }}</p>
                 @if($house->is_old)
 
-                    <p class="alert-danger">This ad is posted more than 15 days before. To Find the recent ads click the button bellow</p>
                     <a href="/rent-basement-house-room-in/{{$house->city}}" style="text-decoration:none;">
                         <div class="btn btn-success">Recent Ads in {{$house->city}}</div>
                     </a>

@@ -63,6 +63,8 @@
                 <div class="mb-5">
     			<h3 class="bold green">{{$house->title}}</h3>
 
+                <p class="alert-danger"><span class="bold">Posted:</span> {{$house->time_passed}} . To find the recent ads , click the button below.</p>
+
     			<p> <span class="bold">Address: </span>{{ $house->address}}</p>
     			<p> <span class="bold">Description: </span>{{substr($house->description, 0, 300)}}...</p>
     			<p> <span class="bold">Price: </span>{{ $house->price}}</p>
@@ -71,7 +73,6 @@
                 @if($house->is_old)
 
 
-                    <p class="alert-danger">This ad is posted more than 15 days before. To Find the recent ads click the button bellow</p>
                     <a href="/rent-basement-house-room-in/{{$house->city}}" style="text-decoration:none;">
                         <div class="btn btn-success">Recent Ads in {{$house->city}}</div>
                     </a>
