@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\House;
 
+
 class ListViewController extends Controller
 {
     public function listView(){
@@ -14,7 +15,8 @@ class ListViewController extends Controller
     	return view('list-view.list-view', [
 
     		'houses' => $houses, 
-            'city' => 'Toronto'
+            'city' => 'Toronto',
+            'list_by_city' => false
 
     	]);
     }
@@ -31,7 +33,8 @@ class ListViewController extends Controller
         return view('list-view.list-view', [
 
             'houses' => $houses,
-            'city' => $city
+            'city' => $city,
+            'list_by_city' => true
 
         ]);
 
@@ -73,6 +76,7 @@ class ListViewController extends Controller
     public function getListing($id){
 
     	$house = House::find($id);
+
 
         if(!$house){
 

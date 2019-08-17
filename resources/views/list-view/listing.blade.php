@@ -59,7 +59,19 @@
                 <p> <span class="bold">Pet Friendly: </span>{{$house->pet_friendly ? $house->pet_friendly : 'NA' }}</p>
                 <p> <span class="bold">Parking: </span>{{$house->parking ? $house->parking : 'NA' }}</p>
                 <p> <span class="bold">Published On: </span>{{$house->kijiji_publish_date ? $house->kijiji_publish_date : 'NA' }}</p>
+                @if($house->is_old)
+
+                    <p class="alert-danger">This ad is posted more than 15 days before. To Find the recent ads click the button bellow</p>
+                    <a href="/rent-basement-house-room-in/{{$house->city}}" style="text-decoration:none;">
+                        <div class="btn btn-success">Recent Ads in {{$house->city}}</div>
+                    </a>
+                    <a href="/list-city" style="text-decoration:none;">
+                        <div class="btn btn-primary"> Other Cities</div>
+                    </a>
+
+                @else
                 <a href="{{$house->kijiji_link}}"><div class="btn btn-success mb-5" style="width:100%;"> Connect the Renter</div></a>
+                @endif
                 
 
             </div>

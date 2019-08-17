@@ -27,9 +27,16 @@
             <div class="col">
                 <a href="/map-view" class="btn btn-success"> Find the house in Map</a>
             </div>
+            @if($list_by_city)
+            <div class="col">
+                <a href="/rent-basement-house-room/{{$city}}" class="btn btn-success"> Most recent ads in {{$city}}</a>
+            </div>
+            @else
             <div class="col">
                 <a href="/list-city" class="btn btn-success"> Find  house in your city</a>
             </div>
+            @endif
+
         </div>
         <div class="row mt-5">
             <div class="col">
@@ -59,9 +66,24 @@
     			<p> <span class="bold">Address: </span>{{ $house->address}}</p>
     			<p> <span class="bold">Description: </span>{{substr($house->description, 0, 300)}}...</p>
     			<p> <span class="bold">Price: </span>{{ $house->price}}</p>
+
+
+                @if($house->is_old)
+
+
+                    <p class="alert-danger">This ad is posted more than 15 days before. To Find the recent ads click the button bellow</p>
+                    <a href="/rent-basement-house-room-in/{{$house->city}}" style="text-decoration:none;">
+                        <div class="btn btn-success">Recent Ads in {{$house->city}}</div>
+                    </a>
+                    <a href="/list-city" style="text-decoration:none;">
+                        <div class="btn btn-primary"> Other Cities</div>
+                    </a>
+
+                @else
     			<a href="/listing/{{$house->id}}" style="text-decoration:none;">
     				<div class="btn btn-success"> See Detail</div>
     			</a>
+                @endif
                 </div>
                     @if ($loop->first)
                     <div class="mb-5">
