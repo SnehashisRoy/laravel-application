@@ -43,8 +43,14 @@
             
          <div class="row" style="margin-top: 50px;">
             <div class="col-sm-12 col-md-4 mb-3">
+                <div class="mb-3 p-2" style="border: solid 1px #007bff; text-align: justify; text-justify: inter-word;">
+                    <p >Air Quality is essential for Healthy Environment. To improve the quality of air in basement apartment, you must remove humidity. Dehumidifier is the perfect solution. It prevents the growth of molds and get rid off dampness. </p>
+                    <a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=banglatoronto-20&linkCode=ur2&linkId=04a13d792f4710677e3258c23d5a8e6b&camp=1789&creative=9325&index=hpc&keywords=dehumidifier">Click to find 30 Best Dehumidifiers for your health</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=banglatoronto-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                </div>
                 <img src = "{{$house->image_url}}" class="img-responsive" alt="{{$house->title}}" style="width:100%;">
+
             </div>
+            
 
             <div class="col-sm-12 col-md-8">
                 <h2 class="primary">{{$house->title}}</h2>
