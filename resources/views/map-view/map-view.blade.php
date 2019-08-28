@@ -68,6 +68,7 @@
     
 
  <!-- The Modal -->
+ <div v-cloak>
  <div id="myModal" class="modal" style="display: block;" v-if="openModal">
 
    <!-- Modal content -->
@@ -108,6 +109,7 @@
      
    </div>
 
+ </div>
  </div>
 </div>
     
