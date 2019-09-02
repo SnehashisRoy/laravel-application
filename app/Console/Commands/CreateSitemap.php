@@ -50,9 +50,9 @@ class CreateSitemap extends Command
         
 
         SitemapIndex::create()
-            ->add('/sitemap.xml')
-            ->add('/sitemap_1.xml')
-            ->add('/sitemap_2.xml')
+            ->add('http://www.banglatoronto.ca/sitemap.xml')
+            ->add('http://www.banglatoronto.ca/sitemap_1.xml')
+            ->add('http://www.banglatoronto.ca/sitemap_2.xml')
             ->writeToFile(public_path('sitemapindex.xml'));
 
         //SitemapGenerator::create('http://www.banglatoronto.ca')->writeToFile('/var/www/rentBasement/public/sitemap.xml');
@@ -74,7 +74,7 @@ class CreateSitemap extends Command
         
         House::where('id','<', 50000)->get()->map(function($listing) use($sitemap){
 
-            $sitemap->add(Url::create('/listing/'. $listing->id)) ;
+            $sitemap->add(Url::create('http://www.banglatoronto.ca/listing/'. $listing->id)) ;
 
         });
 
@@ -85,7 +85,7 @@ class CreateSitemap extends Command
         
         House::where('id','>=', 50000)->get()->map(function($listing) use($sitemap){
 
-            $sitemap->add(Url::create('/listing/'. $listing->id)) ;
+            $sitemap->add(Url::create('http://www.banglatoronto.ca/listing/'. $listing->id)) ;
 
         });
 
