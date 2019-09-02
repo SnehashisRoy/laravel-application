@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>http://localhost/sitemap.xml</loc>
+    
+        <lastmod>2019-09-02T01:35:32+00:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost/sitemap_1.xml</loc>
+    
+        <lastmod>2019-09-02T01:35:32+00:00</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>http://localhost/sitemap_2.xml</loc>
+    
+        <lastmod>2019-09-02T01:35:32+00:00</lastmod>
+    </sitemap>
+</sitemapindex>
