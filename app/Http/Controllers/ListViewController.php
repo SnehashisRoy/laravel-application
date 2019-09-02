@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\House;
+use App\Models\BlogCategory;
 
 
 class ListViewController extends Controller
@@ -87,9 +88,18 @@ class ListViewController extends Controller
 
         $house->save();
 
+        // get the house blogs
+
+        $cat = BlogCategory::where('category', '!=', 'uncategorized')->findOrFail(14);
+
+            if($cat){
+                $blogs = $cat->blogs;
+            }
+
     	return view('list-view.listing', [
 
-    		'house' => $house
+    		'house' => $house,
+            'blogs' => $blogs
 
     	]);
 

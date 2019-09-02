@@ -57,8 +57,8 @@
             
     		<div class="col-12 col-md-8">
                 @foreach($houses as $house)
-                <div class="mb-5">
-                    <img src="{{$house->image_url}}" alt="{{$house->title}}" style="width: 100%; height: 300px;">
+                <div class="mb-5" style="max-width: 400px;">
+                    <img src="{{$house->image_url ?? '/images/rent_house.jpg'}}" alt="{{$house->title}}" style="width: 100%; height: 300px;">
                 </div>
                 <div class="mb-5">
     			<h3 class="bold green">{{$house->title}}</h3>

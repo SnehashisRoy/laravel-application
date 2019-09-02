@@ -43,7 +43,7 @@
             
          <div class="row" style="margin-top: 50px;">
             <div class="col-sm-12 col-md-3 mb-3">
-                <img src = "{{$house->image_url}}" class="img-responsive" alt="{{$house->title}}" style="width:100%;">
+                <img src = "{{$house->image_url ?? '/images/rent_house.jpg'}}" class="img-responsive" alt="{{$house->title}}" style="width:100%;">
             </div>
             
 
@@ -82,10 +82,13 @@
                     <a href="/rent-basement-house-room-in/{{@$house->city}}"><div class="btn btn-success" style="width:100%;"> Rent a house in {{@$house->city}}</div></a>
                     
                 </div>
-                <div>
+                <div class="mb-5">
                     <a href="/list-city"><div class="btn btn-success" style="width:100%;"> House in other Cities</div></a>
                     
                 </div>
+                @foreach($blogs as $blog)
+                     <a href="/blog/{{$blog->slug}}"><h5>{{$blog->title}}</h5></a>
+                @endforeach
             </div>
              
          </div>
