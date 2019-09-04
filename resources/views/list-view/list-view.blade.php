@@ -23,19 +23,16 @@
     
 
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <a href="/map-view" class="btn btn-success"> Find the house in Map</a>
-            </div>
+        <div class="text-center">
             @if($list_by_city)
-            <div class="col">
-                <a href="/rent-basement-house-room/{{$city}}" class="btn btn-success"> Most recent ads in {{$city}}</a>
-            </div>
+                <h3> Houses / basements for rent in {{$city}}</h3>
             @else
-            <div class="col">
-                <a href="/list-city" class="btn btn-success"> Find  house in your city</a>
-            </div>
+                <h3> Houses / basements for Rent</h3>
             @endif
+            <div class="mb-5">
+                <a href="/list-city"><div class="btn btn-success" style="width:100%;"> Houses / basements in Your City</div></a>
+                
+            </div>
 
         </div>
         <div class="row mt-5">

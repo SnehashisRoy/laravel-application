@@ -24,31 +24,19 @@
 
 
         <div class="container">
-            <div class="row justify-content-md-center">
-                
-                <div class="col col-md-4 ">
-                    <a href="/rent-basement-house-room-in/{{@$house->city}}"><div class="btn btn-success" style="width:100%;"> Rent a house in {{@$house->city}}</div></a>
-                    
-                </div>
-                <div class="col col-md-4 ">
-                    <a href="/list-city"><div class="btn btn-success" style="width:100%;"> House in other Cities</div></a>
-                    
-                </div>
-                <div class="col col-md-4 ">
-                    <a href="/map-view"><div class="btn btn-success" style="width:100%;"> Find a house in Map</div></a>
-                    
-                </div>
+            <div class="text-center primary">
+
+                   <h2> {{$house->title}}</h2>              
                 
             </div>
             
          <div class="row" style="margin-top: 50px;">
             <div class="col-sm-12 col-md-3 mb-3">
-                <img src = "{{$house->image_url ?? '/images/rent_house.jpg'}}" class="img-responsive" alt="{{$house->title}}" style="width:100%;">
+                <img src = "{{$house->image_url ?? '/images/rent_house.jpg'}}" class="img-responsive" alt="{{$house->title}}" style="width:100%; max-height: 300px;">
             </div>
             
 
             <div class="col-sm-12 col-md-6 mb-5">
-                <h2 class="primary">{{$house->title}}</h2>
                 <p class="alert-success"><span class="bold">Posted:</span> {{$house->time_passed}} .</p>
                 <p><span class="bold">Addreess:</span> {{$house->address}}</p>
                 <p><span class="bold">Description:</span> {{$house->description}}</p>
@@ -86,9 +74,17 @@
                     <a href="/list-city"><div class="btn btn-success" style="width:100%;"> House in other Cities</div></a>
                     
                 </div>
-                @foreach($blogs as $blog)
-                     <a href="/blog/{{$blog->slug}}"><h5>{{$blog->title}}</h5></a>
-                @endforeach
+                <div class="mb-5">
+                    <a href="/map-view"><div class="btn btn-success" style="width:100%;"> Find a house in Map</div></a>
+                    
+                </div>
+                <div>
+                    @foreach($blogs as $blog)
+                         <a href="/blog/{{$blog->slug}}"><h5>{{$blog->title}}</h5></a>
+                    @endforeach
+                    
+                </div>
+                
             </div>
              
          </div>

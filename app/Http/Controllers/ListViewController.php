@@ -68,7 +68,8 @@ class ListViewController extends Controller
         return view('list-view.list-view', [
 
             'houses' => $houses,
-            'city' => 'Toronto'
+            'city' => 'Toronto',
+            'list_by_city' => false
 
         ]);
 
