@@ -29,6 +29,16 @@
                    <h2> {{$house->title}}</h2>              
                 
             </div>
+            <div class="row">
+                <div class="col-md-6 mt-1 mb-3">
+                    <a href="/rent-basement-house-room-in/{{@$house->city}}"><div class="btn btn-success" style="width:100%;"> Houses/basements in {{@$house->city}}</div></a>
+                    
+                </div>
+                <div class="col-md-6">
+                    <a href="/list-city"><div class="btn btn-success" style="width:100%;"> Houses/basements in other Cities</div></a>
+                    
+                </div>
+            </div>
             
          <div class="row" style="margin-top: 50px;">
             <div class="col-sm-12 col-md-3 mb-3">
@@ -66,14 +76,7 @@
 
             </div>
             <div class="col-sm-12 col-md-3 mb-3">
-                <div class="mb-5">
-                    <a href="/rent-basement-house-room-in/{{@$house->city}}"><div class="btn btn-success" style="width:100%;"> Rent a house in {{@$house->city}}</div></a>
-                    
-                </div>
-                <div class="mb-5">
-                    <a href="/list-city"><div class="btn btn-success" style="width:100%;"> House in other Cities</div></a>
-                    
-                </div>
+                
                 <div class="mb-5">
                     <a href="/map-view"><div class="btn btn-success" style="width:100%;"> Find a house in Map</div></a>
                     
