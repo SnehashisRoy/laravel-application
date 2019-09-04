@@ -11,7 +11,7 @@
 
 
 
-@section('title', 'Bangla Toronto: Rent a basement / house / room  in '.  $city)
+@section('title', 'Rent a basement / house / room  in '.  $city )
 
 
 

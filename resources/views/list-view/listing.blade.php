@@ -11,7 +11,7 @@
 
 
 
-@section('title', 'Bangla Toronto: Rent a house- '. $house->address)
+@section('title', 'Rent a house / basement / room - '. $house->address )
 
 
 
