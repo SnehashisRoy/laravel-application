@@ -25,8 +25,9 @@ class CompanyController extends Controller
     	$company = Company::where('slug', $cat)
     	                    ->where('company_slug', $company)
     	                    ->first();
+
     	if(!$company){
-    		abort(404);
+    		return redirect('/');
 
     	}
 
