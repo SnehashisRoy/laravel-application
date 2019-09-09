@@ -33,7 +33,7 @@ var map_view = new Vue({
 
 		    		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 		    		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		    		    maxZoom: 24,
+		    		    maxZoom: 15,
 		    		    id: 'mapbox.streets',
 		    		    accessToken: 'pk.eyJ1Ijoic25laGFzaGlzIiwiYSI6ImNqaG84ZW9sYzFwdXgzZHVpNmEyODA3azMifQ.yKvFkhM7KLjF6VMDd1iomQ'
 		    		}).addTo(mymap);
@@ -80,7 +80,10 @@ var map_view = new Vue({
 		    		     opacity: 1,
 		    		     fillOpacity: 0.8
 		    		 };
-		    		 this.geoJsonlayer = L.geoJSON(this.geoJson, {
+
+		    		 var markers = L.markerClusterGroup();
+
+		    		 var geoJsonlayer = L.geoJSON(this.geoJson, {
 		    		     pointToLayer: function (feature, latlng) {
 		    		         return L.circleMarker(latlng, markerOptions);
 		    		     }, 
@@ -92,7 +95,12 @@ var map_view = new Vue({
 		    		     // 	        }
 
 		    		     // }
-		    		 }).addTo(this.map);
+		    		 });
+
+
+		    		 markers.addLayer(geoJsonlayer);
+		    		 
+		    		 this.map.addLayer(markers);
 
 
 		    	},
