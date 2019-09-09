@@ -15,7 +15,7 @@ class MapViewController extends Controller
 
         $current = Carbon::now();
 
-    	$houses = House::with('images')->where('created_at', '>', $current->subDays(4))->get();
+    	$houses = House::with('images')->where('created_at', '>', $current->subDays(7))->get();
 
     	$geo = [];
 
