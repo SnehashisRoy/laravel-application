@@ -27,7 +27,7 @@
         <div class="jumbotron text-center">
             <h3>Start typing  your city in search box below and click on desired City </h3>
         </div>
-        <div class="container">
+        <div class="container" style="min-height: 400px;">
             
             <div class="row mb-3">
                 <div class="col">
@@ -37,7 +37,7 @@
                 </div>
                 
             </div>
-            <div class="row" style="min-height: 300px;">
+            <div class="row" >
                 <div ng-repeat="city in cities | filter: searchText" class="col-6 col-md-3 ">
                     <a href="/rent-basement-house-room-in/${city.city}$"><p>${ city.city}$</p></a>
                 </div>
