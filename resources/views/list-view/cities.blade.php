@@ -25,7 +25,7 @@
    
     <div ng-app="myApp" ng-controller="myCtrl">
         <div class="jumbotron text-center">
-            <h4>Start typing  your city in search box below </h4>
+            <h3>Start typing  your city in search box below and click on desired City </h3>
         </div>
         <div class="container">
             
@@ -37,7 +37,7 @@
                 </div>
                 
             </div>
-            <div class="row justify-content-sm-center">
+            <div class="row">
                 <div ng-repeat="city in cities | filter: searchText" class="col-6 col-md-3 ">
                     <a href="/rent-basement-house-room-in/${city.city}$"><p>${ city.city}$</p></a>
                 </div>
