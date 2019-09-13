@@ -37,7 +37,7 @@
                 </div>
                 
             </div>
-            <div class="row">
+            <div class="row" style="min-height: 300px;">
                 <div ng-repeat="city in cities | filter: searchText" class="col-6 col-md-3 ">
                     <a href="/rent-basement-house-room-in/${city.city}$"><p>${ city.city}$</p></a>
                 </div>
