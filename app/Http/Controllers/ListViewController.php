@@ -43,13 +43,14 @@ class ListViewController extends Controller
 
     }
 
+    public function cities(){
+        return view('list-view.cities');
+    }
+
     public function getCities(){
-        $cities = House::select('city')->distinct()->orderBy('city')->get();
+        $cities = House::select('city')->distinct()->whereNotNull('city')->orderBy('city')->get();
 
-        return view('list-view.cities', [
-            'cities' => $cities
-
-        ]);
+        return  response()->json($cities);
     }
 
     public function postListView(Request $r){

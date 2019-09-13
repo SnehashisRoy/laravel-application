@@ -76,7 +76,7 @@ Route::post('/scraper/create-house', 'Admin\ScraperController@postHouseDetail');
 
 Route::get('map-view', 'MapViewController@mapView');
 Route::get('list-view', 'ListViewController@listView');
-Route::get('list-city', 'ListViewController@getCities');
+Route::get('list-city', 'ListViewController@cities');
 Route::get('rent-basement-house-room-in/{city}', 'ListViewController@listViewByCity');
 Route::post('list-view', 'ListViewController@PostListView');
 Route::get('listing/{id}', 'ListViewController@getListing');
@@ -98,6 +98,30 @@ Route::get('/infoblog/{slug}', function($slug){
 
     return redirect('/blog/'. $slug , 301);
 });
+
+
+Route::group(['prefix' => '/web-api/v1'], function () {
+
+    Route::get('/cities', 'ListViewController@getCities');
+    
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@
 @endsection
 
 @section('vendorjs') 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 @endsection
 
 
@@ -19,40 +19,47 @@
 @section('content')
 
 
-    <div class="jumbotron text-center">
-        <h2>Please click on a city to find Rental Ads of that area</h2>
-    </div>
-
-    <div class="container">
-        
-        
-        <div class="row">
-            @foreach($cities as $city)
-
-            <div class="col-4">
-                 <a href="/rent-basement-house-room-in/{{$city->city}}"><p>{{$city->city}}</p></a>
-            </div>
-        
-            @endforeach
-            
-        </div>
-    	
-
-
-    	
-    </div>
 
 
     
+   
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <div class="jumbotron text-center">
+            <h4>Start typing  your city in search box below </h4>
+        </div>
+        <div class="container">
+            
+            <div class="row mb-3">
+                <div class="col">
+
+                    <input class="form-control form-control-lg" ng-model="searchText" placeholder="Start Typing Your City" style="width:100%;">
+
+                </div>
+                
+            </div>
+            <div class="row justify-content-sm-center">
+                <div ng-repeat="city in cities | filter: searchText" class="col-6 col-md-3 ">
+                    <a href="/rent-basement-house-room-in/${city.city}$"><p>${ city.city}$</p></a>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+       
+    </div>
+
+
+
+    
+
+
    
 @endsection
 
 
 @section('pagejs')
-
-
-	
-	<script src="{{ url('/js/page/list.js')}}"></script>
-		 
+            
+	<script src="{{ url('/js/page/list-city.js')}}"></script>
 	
 @endsection
