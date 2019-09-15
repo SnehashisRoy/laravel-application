@@ -28,7 +28,7 @@ class MapViewController extends Controller
     				'address' =>  $house->address,
     				'popupContent' => $house->address,
                     'title' => $house->title,
-                    'description' => $house->description,
+                    'description' => substr($house->description, 0, 200). '......(click " See Detail" to see more)',
                     'listing_url' => $house->listing_url,
                     'kijiji_publish_date' => $house->kijiji_publish_date,
                     'bedrooms' => $house->bedrooms,
