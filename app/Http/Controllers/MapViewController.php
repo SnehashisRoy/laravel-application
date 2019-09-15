@@ -29,7 +29,7 @@ class MapViewController extends Controller
     				'popupContent' => $house->address,
                     'title' => $house->title,
                     'description' => $house->description,
-                    'kijiji_link' => $house->kijiji_link,
+                    'listing_url' => $house->listing_url,
                     'kijiji_publish_date' => $house->kijiji_publish_date,
                     'bedrooms' => $house->bedrooms,
                     'bathrooms' => $house->bathrooms,
@@ -38,7 +38,7 @@ class MapViewController extends Controller
                     'parking' => $house->parking,
                     'size' => $house->size,
                     'price' => $house->price,
-                    'image_url' => $house->image_url,
+                    'image_url' => $house->image_url ? $house->image_url : 'http://banglatoronto.ca/images/rent_house.jpg',
 
 
 

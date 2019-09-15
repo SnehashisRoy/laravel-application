@@ -99,7 +99,7 @@
                 <p> <span class="bold">Pet Friendly: </span>${listing.pet_friendly ? listing.pet_friendly : 'NA' }</p>
                 <p> <span class="bold">Parking: </span>${listing.parking ? listing.parking : 'NA' }</p>
                 <p> <span class="bold">Published On: </span>${listing.kijiji_publish_date ? listing.kijiji_publish_date : 'NA' }</p> -->
-                <a :href="listing.kijiji_link"><div class="btn button-primary" style="width:100%;"> Connect the Renter</div></a>
+                <a :href="listing.listing_url"><div class="btn button-primary" style="width:100%;"> See Detail</div></a>
                 
 
             </div>

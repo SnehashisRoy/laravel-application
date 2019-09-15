@@ -29,6 +29,11 @@ class House extends Model
 
     	return $this->created_at->diffForHumans(Carbon::now());
     }
+
+    public function getListingUrlAttribute(){
+        
+        return 'http://banglatoronto.ca/listing/'.$this->id;
+    }
 	
 	
 }
