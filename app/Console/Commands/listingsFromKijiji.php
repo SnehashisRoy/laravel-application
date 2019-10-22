@@ -98,11 +98,13 @@ class listingsFromKijiji extends Command
 
         $arr = Parser::xml($res);
 
+        $links = House::all()->pluck('kijiji_link')->all();
+
         foreach($arr['channel']['item'] as $item){
 
             $details = $this->getDetailFromScraping($item);
 
-            $this->insertListing($details, $geo);
+            $this->insertListing($details, $geo, $links);
         }
         
 
@@ -173,9 +175,9 @@ class listingsFromKijiji extends Command
 
     }
 
-    protected function insertListing($details, $geo){
+    protected function insertListing($details, $geo, $links){
 
-        $links = House::all()->pluck('kijiji_link')->all();
+        
 
         if(in_array(@$details['link'], $links)){
             $this->info('already in database');
