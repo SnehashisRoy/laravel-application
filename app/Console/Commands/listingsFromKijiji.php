@@ -95,7 +95,7 @@ class listingsFromKijiji extends Command
 
         $memoryLimit = ini_get('memory_limit');
 
-        ini_set('memory_limit', 512); 
+        ini_set('memory_limit', 2048); 
 
 
         ini_set('memory_limit', $memoryLimit); 

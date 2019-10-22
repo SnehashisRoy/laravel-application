@@ -172,9 +172,7 @@ class ListingsController extends Controller
 
         $image->delete();
 
-        $listing = House::with('images')->find($image->house_id);
-
-        return  response()->json(['success' => true, 'data' => $listing]);
+        return  response()->json(['success' => true, 'data' => $image]);
 
     }
 }
