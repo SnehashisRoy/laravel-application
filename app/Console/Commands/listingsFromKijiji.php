@@ -91,6 +91,16 @@ class listingsFromKijiji extends Command
 
         // }
 
+        // Increase the memory limit for this call
+
+        $memoryLimit = ini_get('memory_limit');
+
+        ini_set('memory_limit', 512); 
+
+
+        ini_set('memory_limit', $memoryLimit); 
+
+
         $url = $this->argument('url');
 
         $res = file_get_contents($url);
