@@ -26,8 +26,7 @@ class Kernel extends ConsoleKernel
     {
 
         $schedule->command('get:listings https://www.kijiji.ca/rss-srp-canada/basement-for-rent/k0l0')
-                  ->cron('* * * * *')
-                  ->withoutOverlapping();                  ;
+                  ->cron('* * * * *');
     }
 
     /**
