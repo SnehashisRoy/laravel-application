@@ -108,6 +108,20 @@ Route::group(['prefix' => '/web-api/v1'], function () {
 });
 
 
+Route::get('remove-junk-listing', function(){
+
+    $date = \Carbon\Carbon::now()->subDays(60);
+    
+    $houses = \DB::SELECT('
+        select * from houses 
+        where views > 9
+        and created_at < \''.$date.'\'
+
+        ');
+
+    dd($houses);
+});
+
 
 
 
