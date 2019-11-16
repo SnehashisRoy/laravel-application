@@ -116,11 +116,26 @@ Route::get('remove-junk-listing', function(){
         select * from houses 
         where views < 9
         and created_at < \''.$date.'\'
+        and deleted_at is null
         limit 1000
 
         ');
 
-    dd($houses);
+    //dd($houses);
+
+    foreach ($houses as $house) {
+
+        //dd($house->id);
+
+       $listing =  \App\Models\House::find($house->id);
+
+       //dd($listing);
+
+       if($listing){
+        $listing->delete();
+       }
+        # code...
+    }
 });
 
 
