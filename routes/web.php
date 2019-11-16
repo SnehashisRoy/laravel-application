@@ -114,7 +114,7 @@ Route::get('remove-junk-listing', function(){
     
     $houses = \DB::SELECT('
         select * from houses 
-        where views > 9
+        where views < 9
         and created_at < \''.$date.'\'
         limit 1000
 
