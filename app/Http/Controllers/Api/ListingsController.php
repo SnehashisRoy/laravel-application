@@ -29,7 +29,7 @@ class ListingsController extends Controller
 
 
         $house->title = $r->title;
-        $house->user_id = \Auth::id();
+        $house->user_id = auth('api')->user()->id;
         $house->slug = implode('-', explode(' ', $r->title));
         $house->address = $r->address;
         $house->city = $r->city;
@@ -152,7 +152,7 @@ class ListingsController extends Controller
                         $image = new Image;
 
                         $image->house_id = $id;
-                        $image->image_url = '/uploads/'.$url;
+                        $image->image_url = 'uploads/'.$url;
 
                         $image->save();
 
@@ -170,9 +170,15 @@ class ListingsController extends Controller
 
         $image = Image::find($id);
 
+        if(!$image){
+             return  response()->json(['success' => false, 'data' => 'no image as such']);
+        }
+
         $image->delete();
 
-        return  response()->json(['success' => true, 'data' => $image]);
+        $listing = House::with('images')->find($image->house_id);
+
+        return  response()->json(['success' => true, 'data' => $listing]);
 
     }
 }
