@@ -11,8 +11,8 @@ use App\Models\Image;
 class ListingsController extends Controller
 {
     public function getListings(){
-        //$listings = House::with('images')->where('user_id', \Auth::id())->get();
-        $listings = House::with('images')->orderBy('id', 'desc')->take(5)->get();
+        $listings = House::with('images')->where('user_id', auth('api')->user()->id)->get();
+        //$listings = House::with('images')->orderBy('id', 'desc')->take(5)->get();
 
         return  response()->json($listings);
     }
