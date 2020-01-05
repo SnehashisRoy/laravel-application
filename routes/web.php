@@ -110,7 +110,7 @@ Route::group(['prefix' => '/web-api/v1'], function () {
 
 Route::get('remove-junk-listing', function(){
 
-    $date = \Carbon\Carbon::now()->subDays(60);
+    $date = \Carbon\Carbon::now()->subDays(90);
     
     $houses = \DB::SELECT('
         select * from houses 
