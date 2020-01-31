@@ -31,13 +31,13 @@
 
 	   gtag('config', 'UA-50398498-3');
 	 </script>
-	 <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	 <script>
 	   (adsbygoogle = window.adsbygoogle || []).push({
 	     google_ad_client: "ca-pub-3241769306866365",
 	     enable_page_level_ads: true
 	   });
-	 </script> -->
+	 </script>
 	
 	@yield('vendorcss')
 
