@@ -98,7 +98,19 @@ class listingsFromKijiji extends Command
 
         $arr = Parser::xml($res);
 
-        $links = House::all()->pluck('kijiji_link')->all();
+        // $links = House::all()->pluck('kijiji_link')->all();
+
+        $links =[];
+
+        House::chunk(200, function($houses){
+
+            foreach ($houses as $house) {
+
+                $links[]= $house->kijiji_link;
+                
+            }
+
+        });
 
         foreach($arr['channel']['item'] as $item){
 
