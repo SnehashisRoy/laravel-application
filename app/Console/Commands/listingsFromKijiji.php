@@ -102,7 +102,8 @@ class listingsFromKijiji extends Command
 
         $links =[];
 
-        House::chunk(200, function($houses){
+        House::chunk(200, function($houses) use (&$links){
+
 
             foreach ($houses as $house) {
 
