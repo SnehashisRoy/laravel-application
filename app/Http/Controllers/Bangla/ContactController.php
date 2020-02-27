@@ -10,7 +10,16 @@ use GuzzleHttp\Client;
 class ContactController extends Controller
 {
     public function show(){
-    	return view('bangla.contact-us');
+
+        $message = null;
+
+        if(isset($_GET['id'])){
+        $message = 'Please remove the add with the id of '. $_GET['id'];
+
+             }
+
+
+    	return view('bangla.contact-us', ['text' =>  $message ]);
     }
 
     public function postContact(Request $r){

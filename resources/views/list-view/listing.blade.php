@@ -49,6 +49,7 @@
             <div class="col-sm-12 col-md-6 mb-5">
                 <p class="alert-success"><span class="bold">Posted:</span> {{$house->time_passed}} .</p>
                 <p><span class="bold">Addreess:</span> {{$house->address}}</p>
+                <p class="alert-success"> If you own this property and want to remove the ad, <a href="/contact-us?id={{$house->id}}">click here</a></p>
                 <p><span class="bold">Description:</span> {{$house->description}}</p>
                 <!---Add here-->
                 <p> <span class="bold">Price: </span>{{$house->price ? $house->price : 'NA' }}</p>
@@ -59,6 +60,8 @@
                 <p> <span class="bold">Pet Friendly: </span>{{$house->pet_friendly ? $house->pet_friendly : 'NA' }}</p>
                 <p> <span class="bold">Parking: </span>{{$house->parking ? $house->parking : 'NA' }}</p>
                 <p> <span class="bold">Published On: </span>{{$house->kijiji_publish_date ? $house->kijiji_publish_date : 'NA' }}</p>
+
+
                 @if($house->is_old)
 
                     <p class="alert-danger">This ad is old. To Find the recent ads click the button bellow.</p>

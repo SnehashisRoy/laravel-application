@@ -63,8 +63,11 @@
                 <p class="alert-success"><span class="bold">Posted:</span> {{$house->time_passed}}.</p>
 
     			<p> <span class="bold">Address: </span>{{ $house->address}}</p>
+                <p class="alert-success"> If you own this property and want to remove the ad, <a href="/contact-us?id={{$house->id}}">click here</a></p>
     			<p> <span class="bold">Description: </span>{{substr($house->description, 0, 300)}}...</p>
     			<p> <span class="bold">Price: </span>{{ $house->price}}</p>
+
+
 
 
                 @if($house->is_old)
@@ -84,14 +87,7 @@
     			</a>
                 @endif
                 </div>
-                    @if ($loop->first)
-                    <div class="mb-5">
-                        <div class="mb-3 p-2" style="border: solid 1px #007bff; text-align: justify; text-justify: inter-word;">
-                            <p >Air Quality is essential for Healthy Environment. To improve the quality of air in basement apartment, you must remove humidity. Dehumidifier is the perfect solution. It prevents the growth of molds and get rid off dampness. </p>
-                            <a target="_blank" href="https://www.amazon.com/gp/search?ie=UTF8&tag=banglatoronto-20&linkCode=ur2&linkId=04a13d792f4710677e3258c23d5a8e6b&camp=1789&creative=9325&index=hpc&keywords=dehumidifier">Click to find 30 Best Dehumidifiers for your health</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=banglatoronto-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-                        </div>
-                    </div>
-                    @endif
+                    
                 @endforeach
 
     			

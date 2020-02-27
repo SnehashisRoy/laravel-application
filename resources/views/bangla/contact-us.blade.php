@@ -68,7 +68,7 @@
                <div class="col-md-6">
                  <div class="form-group">
                      <label for="Information">Information to send</label>
-                     <textarea class="form-control" name="info" id="Information" rows="8"></textarea>
+                     <textarea class="form-control" name="info" id="Information" rows="8">{{$text}}</textarea>
                    </div>
                </div>
                <input type="hidden" name="g-recaptcha-response" id="re_captcha">
