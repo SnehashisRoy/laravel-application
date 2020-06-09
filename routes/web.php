@@ -310,3 +310,5 @@ Route::get('kijiji', function(){
 
 });
 
+Route::post('create-quiz', 'Api\QuizController@createQuiz');
+
