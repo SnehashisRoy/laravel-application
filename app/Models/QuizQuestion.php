@@ -16,14 +16,9 @@ class QuizQuestion extends Model
     protected $table = 'quiz_questions';
     protected $dates = ['deleted_at', 'created_at', 'updated_at'];
 
-    public function questions(){
+    public function choices(){
         return $this->hasMany('App\Models\QuizQuestionChoice', 'question_id');
     }
-
-    public function  answer(){
-        return $this->hasOne('App\Models\QuizQuestionAnswer', 'question_id');
-    }
-
 
 
 

@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class QuizQuestiongAnswer extends Model
+class QuizQuestionAnswer extends Model
 {
     use SoftDeletes;
 

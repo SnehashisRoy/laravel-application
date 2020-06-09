@@ -15,7 +15,8 @@ class CreateQuizTables extends Migration
     {
         Schema::create('quizes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title');
+            $table->text('description');
             $table->string('image');
             $table->timestamps();
             $table->softDeletes();
@@ -25,6 +26,8 @@ class CreateQuizTables extends Migration
             $table->increments('id');
             $table->integer('quiz_id');
             $table->string('question');
+            $table->string('answer');
+            $table->text('explanation');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -37,13 +40,7 @@ class CreateQuizTables extends Migration
             $table->softDeletes();
         });
 
-        Schema::create('quiz_question_answers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('question_id');
-            $table->string('answers');
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        
     }
 
     /**
@@ -56,6 +53,5 @@ class CreateQuizTables extends Migration
         Schema::dropIfExists('quizes');
         Schema::dropIfExists('quiz_questions');
         Schema::dropIfExists('quiz_question_choices');
-        Schema::dropIfExists('quiz_question_answers');
     }
 }
