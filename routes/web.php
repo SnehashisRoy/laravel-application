@@ -82,6 +82,8 @@ Route::post('list-view', 'ListViewController@PostListView');
 Route::get('listing/{id}', 'ListViewController@getListing');
 Route::post('filter', 'MapViewController@filter');
 
+Route::get('quiz/{id}', 'QuizController@getQuiz');
+
 
 
 
