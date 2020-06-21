@@ -1,6 +1,6 @@
 var API_HOST = 'http://localhost:8085';
 
-var app = angular.module('myApp', [], function($interpolateProvider)
+var app = angular.module('myApp', ['ngSocial'], function($interpolateProvider)
   {
       $interpolateProvider.startSymbol('${');
       $interpolateProvider.endSymbol('}$'); 

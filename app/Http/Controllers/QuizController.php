@@ -12,6 +12,10 @@ class QuizController extends Controller
 
 		$quiz = Quiz::with('questions.choices')->find($id);
 
+		$quiz->url = url()->current();
+
+		$quiz->image_url = 'http://www.banglatoronto.ca/'. $quiz->image;
+
 		return view('quiz.quiz', [
 			'id' => $id,
 			'quiz' => $quiz

@@ -3,11 +3,15 @@
 
 @section('vendorcss') 
 
+    <link rel="stylesheet" type="text/css" href="/js/vendors/angular-social/angular-social.css">
+
 @endsection
 
 @section('vendorjs') 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cafe885240a800012587427&product=sticky-share-buttons' async='async'></script>
+
+    <script src="/js/vendors/angular-social/angular-social.js" type="text/javascript"></script>
 
 @endsection
 
@@ -27,6 +31,8 @@
    
     <div ng-app="myApp" ng-controller="myCtrl" class="container" >
         <div class="text-center m-5">
+
+            
 
             <h2>${ quiz.title }$ </h2>
         </div>
@@ -78,16 +84,23 @@
                                  style="--percentage : ${ resultPercent }$ ; --fill: #039BE5 ;">
                                ${ resultPercent + '%'}$
                             </div>
-                            
                         </div>
                         
                     </div>
 
-                    <div class="row">
+                    <div class="row justify-content-center">
 
-                        <div class="col">
-                            <p>বন্ধুদের সাথে শেয়ার করুন</p> 
-                            <div class="sharethis-inline-share-buttons"></div>
+                        <div class="col mt-5 mb-5">
+                            <p>বন্ধুদের সাথে শেয়ার করুন</p>
+                            <ul ng-social-buttons
+                                 data-url="quiz.url"
+                                 data-title="quiz.title"
+                                 data-description="quiz.title "
+                                 data-image="quiz.image_image">
+                                <li class="ng-social-facebook">Facebook</li>
+                                <li class="ng-social-twitter">Twitter</li>
+                                <li class="ng-social-pinterest">Pinterest</li>
+                            </ul> 
 
 
                         </div>
@@ -115,7 +128,7 @@
     <script type="text/javascript">
         
         var quiz_id = {!! $id !!};
-        var quiz = {!! json_encode($quiz) !!}
+        var quiz = {!! json_encode($quiz) !!};
     </script>
             
 	<script src="{{ url('/js/page/quiz.js')}}"></script>
