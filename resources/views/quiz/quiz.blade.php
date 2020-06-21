@@ -2,6 +2,11 @@
 
 
 @section('vendorcss') 
+    <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description"        content="How much does culture influence creative thinking?" />
+    <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
 
     <link rel="stylesheet" type="text/css" href="/js/vendors/angular-social/angular-social.css">
 
@@ -92,11 +97,8 @@
 
                         <div class="col mt-5 mb-5">
                             <p>বন্ধুদের সাথে শেয়ার করুন</p>
-                            <ul ng-social-buttons
-                                 data-url="quiz.url"
-                                 data-title="quiz.title"
-                                 data-description="quiz.title "
-                                 data-image="quiz.image_image">
+                            <ul ng-social-buttons>
+                                 
                                 <li class="ng-social-facebook">Facebook</li>
                                 <li class="ng-social-twitter">Twitter</li>
                                 <li class="ng-social-pinterest">Pinterest</li>
