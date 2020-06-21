@@ -17,7 +17,7 @@
 
 
 
-@section('title', 'Bangla Toronto: List of Cities')
+@section('title',  $quiz->title )
 
 
 
