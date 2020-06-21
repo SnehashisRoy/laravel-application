@@ -39,7 +39,7 @@
                 <div ng-repeat="q in quiz.questions"  ng-show="show($index)" style="min-height: 400px;">
                      <div  class="row" ng-hide="answer[q.id]">
                          <div class="col-12 col-md-4">
-                             <img src="${ 'http://localhost:8085/'+ quiz.image }$" class="img-fluid">
+                             <img src="${ 'http://banglatoronto.ca/'+ quiz.image }$" class="img-fluid">
                          </div>
                          <div class="col-12 col-md-8" >
                              <p>${ q.question}$</p>
