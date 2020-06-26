@@ -100,7 +100,7 @@
                             <div class="row justify-content-center">
 
                                 <div class="col mt-5 mb-5">
-                                    <p>বন্ধুদের সাথে শেয়ার করুন</p>
+                                    <p>বন্ধুদের সাথে শেয়ার করুন  (আপনার স্কোর  শেয়ারের সাথে প্রদর্শিত হবে না।)</p>
                                     <ul ng-social-buttons>
                                          
                                         <li class="ng-social-facebook">Facebook</li>
